@@ -1,0 +1,225 @@
+/* Reset y tipografía */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  background: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+    font-size: 17px !important; /* CORRECCIÓN: Tamaño base forzado */
+}
+
+/* Header */
+header {
+  background-color: #005f99;
+  color: white;
+  text-align: center;
+  padding: 15px 20px; /* Reducción de padding del header */
+}
+
+header img {
+  max-height: 80px !important; /* MODIFICACIÓN: Aumentado el tamaño del logo de 55px a 80px */
+}
+
+header h1 {
+    font-size: 22px; /* Título principal más pequeño */
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+    font-size: 16px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Secciones */
+section {
+  padding: 40px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+h2 {
+    font-size: 26px; /* Títulos de sección */
+    margin-bottom: 15px;
+}
+
+h1, h2, h3 {
+  color: #005f99;
+}
+
+/* Catálogo */
+.catalogo {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.catalogo img {
+    /* REDUCCIÓN DE IMAGEN DEL CATÁLOGO */
+  max-width: 600px; /* Máximo 600px de ancho */
+  width: 90%; /* Asegura que se adapte a móviles */
+  height: auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.controls {
+  margin-top: 15px;
+}
+
+.controls button {
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: #005f99;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.controls button:hover {
+  background-color: #004070;
+}
+
+.controls input {
+  width: 60px;
+  padding: 5px;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+/* Instalaciones */
+section#instalaciones img {
+    /* TAMAÑO MÁXIMO DEFINIDO PARA IMÁGENES DE INSTALACIONES */
+  border-radius: 10px;
+  margin: 10px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    max-width: 400px; 
+    width: 45%; 
+    height: auto;
+}
+
+
+/* ---------------------------------------------------------------- */
+/* CONTACTO Y REDES SOCIALES (Cajas de Colores) */
+/* ---------------------------------------------------------------- */
+#contacto {
+    text-align: center; 
+}
+
+#contacto p strong {
+    font-size: 18px; 
+}
+
+.redes-container {
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    flex-wrap: wrap; 
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.social-box {
+    display: inline-block;
+    padding: 12px 18px; 
+    margin: 5px 10px; 
+    color: white !important; 
+    font-weight: bold;
+    text-decoration: none; 
+    border-radius: 6px; 
+    text-align: center;
+    min-width: 140px; 
+    font-size: 18px; 
+    border: none; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2); 
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+.separator {
+    color: #6c757d; 
+    margin: 0 10px; 
+    font-weight: 600; 
+}
+
+/* Colores de Fondo Oficiales (Cajas) */
+#facebook-box {
+    background-color: #1877f2; 
+}
+
+#instagram-box {
+    /* Gradiente para simular el look de Instagram */
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #ffc000 45%, #e1306c 60%, #833ab4 90%);
+    color: white !important; 
+}
+
+#tiktok-box {
+    background-color: #000000; 
+}
+
+#whatsapp-box {
+    background-color: #25D366; 
+}
+
+.social-box:hover {
+    transform: translateY(-2px); 
+    opacity: 0.9; 
+}
+/* ---------------------------------------------------------------- */
+/* FIN DE ESTILOS DE REDES SOCIALES */
+/* ---------------------------------------------------------------- */
+
+
+/* Footer */
+footer {
+  background-color: #005f99;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+footer a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsivo */
+@media(max-width: 980px){
+  nav a {
+    display: block;
+    margin: 8px 0;
+  }
+  
+  section#instalaciones img {
+    max-width: 90%; 
+    width: 90%; 
+  }
+}
+/* final */
