@@ -10,6 +10,7 @@ body {
   background: #f8f9fa;
   color: #333;
   line-height: 1.6;
+  font-size: 17px; /* Tamaño base para mejor legibilidad */
 }
 
 /* Header */
@@ -17,11 +18,18 @@ header {
   background-color: #005f99;
   color: white;
   text-align: center;
-  padding: 20px;
+  padding: 15px 20px; /* Reducción de padding del header */
 }
 
 header img {
-  max-height: 80px;
+  max-height: 80px !important; /* CORRECCIÓN: Tamaño forzado para que sea el grande */
+  width: auto;
+}
+
+header h1 {
+  font-size: 22px;
+  margin-top: 5px;
+  margin-bottom: 10px;
 }
 
 nav {
@@ -33,6 +41,7 @@ nav a {
   margin: 0 15px;
   text-decoration: none;
   font-weight: bold;
+  font-size: 16px;
 }
 
 nav a:hover {
@@ -46,6 +55,11 @@ section {
   margin: auto;
 }
 
+h2 {
+  font-size: 26px; /* Títulos de sección */
+  margin-bottom: 15px;
+}
+
 h1, h2, h3 {
   color: #005f99;
 }
@@ -57,11 +71,13 @@ h1, h2, h3 {
 }
 
 .catalogo img {
-  max-width: 90%;
+  max-width: 600px; /* Máximo 600px de ancho */
+  width: 90%; /* Asegura que se adapte a móviles */
   height: auto;
   border: 1px solid #ddd;
   border-radius: 8px;
   box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
 }
 
 .controls {
@@ -90,6 +106,7 @@ h1, h2, h3 {
   text-align: center;
   border-radius: 5px;
   border: 1px solid #ccc;
+  font-size: 16px;
 }
 
 /* Instalaciones */
@@ -97,25 +114,75 @@ section#instalaciones img {
   border-radius: 10px;
   margin: 10px;
   box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  max-width: 400px; 
+  width: 45%; 
+  height: auto;
 }
 
-/* Contacto y redes sociales */
-#contacto a {
-  text-decoration: none;
-  color: #005f99;
-  margin: 0 8px;
-  font-weight: 600;
+
+/* ---------------------------------------------------------------- */
+/* CONTACTO Y REDES SOCIALES (Cajas de Colores) - Estructura usada en el HTML final */
+/* ---------------------------------------------------------------- */
+#contacto {
+    text-align: center; 
 }
 
-#contacto a:hover {
-  text-decoration: underline;
+#contacto p strong {
+    font-size: 18px; 
 }
 
-/* Estilos específicos para redes sociales */
-#facebook i { color: #3b5998; margin-right: 5px; }
-#instagram i { color: #e4405f; margin-right: 5px; }
-#tiktok i { color: #000000; margin-right: 5px; }
-#whatsapp i { color: #25d366; margin-right: 5px; }
+.redes-container {
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    flex-wrap: wrap; 
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.social-box {
+    display: inline-block;
+    padding: 12px 18px; 
+    margin: 5px 10px; 
+    color: white !important; /* Fuerza el color del texto a blanco */
+    font-weight: bold;
+    text-decoration: none; 
+    border-radius: 6px; 
+    text-align: center;
+    min-width: 140px; 
+    font-size: 18px; 
+    border: none; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2); 
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+/* Colores de Fondo Oficiales (Cajas) */
+#facebook-box {
+    background-color: #1877f2; 
+}
+
+#instagram-box {
+    /* Gradiente para simular el look de Instagram */
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #ffc000 45%, #e1306c 60%, #833ab4 90%);
+    color: white !important; 
+}
+
+#tiktok-box {
+    background-color: #000000; 
+}
+
+#whatsapp-box {
+    background-color: #25D366; 
+}
+
+.social-box:hover {
+    transform: translateY(-2px); 
+    opacity: 0.9; 
+}
+/* ---------------------------------------------------------------- */
+/* FIN DE ESTILOS DE REDES SOCIALES */
+/* ---------------------------------------------------------------- */
+
 
 /* Footer */
 footer {
@@ -144,6 +211,13 @@ footer a:hover {
   }
   
   section#instalaciones img {
+    max-width: 90%; 
+    width: 90%; 
+  }
+}
+  
+  section#instalaciones img {
     max-width: 90%;
   }
 }
+
