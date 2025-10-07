@@ -61,20 +61,23 @@
     <p><strong>Dirección:</strong> Eplicachima y Mariano Samaniego, Barrio El Pedestal, Loja - Ecuador, Código Postal 110103</p>
     <p><strong>Teléfono / WhatsApp:</strong> <a href="https://wa.me/593989266227" target="_blank">+593 989266227</a></p>
     <p><strong>Redes Sociales:</strong></p>
-    <p>
-      <a href="https://www.facebook.com/share/1ASGabaQ2s/" target="_blank" id="facebook">
-        <i class="fab fa-facebook-f"></i> Facebook
-      </a> |
-      <a href="https://www.instagram.com/odontoplus24" target="_blank" id="instagram">
-        <i class="fab fa-instagram"></i> Instagram
-      </a> |
-      <a href="https://www.tiktok.com/@odontoplus24" target="_blank" id="tiktok">
-        <i class="fab fa-tiktok"></i> TikTok
-      </a> |
-      <a href="https://wa.me/593989266227" target="_blank" id="whatsapp">
-        <i class="fab fa-whatsapp"></i> WhatsApp
-      </a>
-    </p>
+        <div class="redes-container">
+            <a href="https://www.facebook.com/share/1ASGabaQ2s/" target="_blank" id="facebook-box" class="social-box">
+                <i class="fab fa-facebook-f"></i> Facebook
+            </a>
+            <span class="separator">|</span>
+            <a href="https://www.instagram.com/odontoplus24" target="_blank" id="instagram-box" class="social-box">
+                <i class="fab fa-instagram"></i> Instagram
+            </a>
+            <span class="separator">|</span>
+            <a href="https://www.tiktok.com/@odontoplus24" target="_blank" id="tiktok-box" class="social-box">
+                <i class="fab fa-tiktok"></i> TikTok
+            </a>
+            <span class="separator">|</span>
+            <a href="https://wa.me/593989266227" target="_blank" id="whatsapp-box" class="social-box">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+        </div>
   </section>
 
   <footer>
@@ -84,17 +87,39 @@
   <script>
     let paginaActual = 1;
     const totalPaginas = 72;
+    // Función para precargar la siguiente imagen
+    let imagenSiguiente = new Image();
 
-    function actualizarImagen() {
-      document.getElementById("catalogoImagen").src = `images/Catalogoodontoplus_page-${String(paginaActual).padStart(4,'0')}.jpg`;
-      document.getElementById("paginaActual").textContent = paginaActual;
-      document.getElementById("paginaInput").value = paginaActual;
-    }
+    function obtenerRuta(numeroPagina) {
+        return `images/Catalogoodontoplus_page-${String(numeroPagina).padStart(4,'0')}.jpg`;
+    }
+
+    function precargarSiguientePagina() {
+        const proximaPagina = paginaActual + 1;
+        if (proximaPagina <= totalPaginas) {
+            imagenSiguiente.src = obtenerRuta(proximaPagina);
+        }
+    }
+    
+    // Inicia la precarga de la página 2 inmediatamente al cargar la página 1
+    precargarSiguientePagina();
+
+
+    function actualizarImagen() {
+        document.getElementById("catalogoImagen").src = obtenerRuta(paginaActual);
+        document.getElementById("paginaActual").textContent = paginaActual;
+        document.getElementById("paginaInput").value = paginaActual;
+        precargarSiguientePagina();
+    }
 
     function siguientePagina() {
       if (paginaActual < totalPaginas) {
         paginaActual++;
-        actualizarImagen();
+        // Usa la imagen precargada para fluidez
+        document.getElementById("catalogoImagen").src = imagenSiguiente.src;
+        document.getElementById("paginaActual").textContent = paginaActual;
+        document.getElementById("paginaInput").value = paginaActual;
+        precargarSiguientePagina();
       }
     }
 
@@ -117,6 +142,7 @@
   </script>
 </body>
 </html>
+
 
 
 
