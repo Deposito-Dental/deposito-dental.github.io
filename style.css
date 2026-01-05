@@ -1,4 +1,4 @@
-/* 1. RESET GENERAL */
+/* 1. RESET Y BASE */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -13,29 +13,29 @@ body {
   font-size: 17px; 
 }
 
-/* 2. HEADER: MARGENES MINIMOS Y LOGO RESALTADO */
+/* 2. HEADER: MARGENES MINIMOS Y LOGO CELESTE */
 header {
   background-color: #005f99 !important;
   text-align: center;
-  /* Reducimos el espacio azul arriba y abajo del logo al mínimo */
+  /* REDUCCIÓN CRÍTICA DE MÁRGENES */
   padding: 5px 0px !important; 
 }
 
 header img {
-  /* Tamaño grande solicitado */
+  /* TAMAÑO GRANDE */
   width: 750px !important; 
-  /* Eliminamos cualquier restricción de altura previa */
+  /* ELIMINAMOS EL ERROR ANTERIOR DE 80PX */
   max-height: none !important; 
   height: auto !important;
   display: inline-block;
   
-  /* Mantiene el diente blanco y vuelve las letras legibles (celeste/blanco) */
-  filter: brightness(1.3) drop-shadow(0px 0px 15px rgba(255, 255, 255, 0.6)) !important;
+  /* COLOR: Letras celestes y diente blanco brillante */
+  filter: hue-rotate(160deg) brightness(1.6) drop-shadow(0px 0px 12px rgba(255, 255, 255, 0.8)) !important;
   
   margin: 0 auto !important;
 }
 
-/* Ocultar el texto "Odonto Plus + Deposito Dental" que está en el HTML */
+/* OCULTAR TEXTO REPETIDO */
 header h1, header p {
   display: none !important;
 }
@@ -53,17 +53,17 @@ nav a {
   font-size: 16px;
 }
 
-/* 3. CATALOGO: QUITAR DISTORSIÓN */
+/* 3. CATÁLOGO: SIN DISTORSIÓN */
 .catalogo img {
   max-width: 600px !important;
   width: 90% !important;
-  /* Esto evita que la imagen se vea estirada o extorsionada */
+  /* MANTIENE TAMAÑO ORIGINAL SIN ESTIRAR */
   height: auto !important; 
   border-radius: 8px;
   box-shadow: 0 6px 20px rgba(0,0,0,0.1);
 }
 
-/* 4. REDES SOCIALES: COLORES SOLIDOS Y VIVOS */
+/* 4. REDES SOCIALES: COLORES OFICIALES VIVOS */
 .social-box {
     display: inline-block;
     padding: 12px 18px; 
@@ -73,9 +73,8 @@ nav a {
     text-decoration: none; 
     border-radius: 6px; 
     min-width: 140px; 
+    opacity: 1 !important; /* Colores sólidos */
     box-shadow: 0 4px 10px rgba(0,0,0,0.2); 
-    /* Quitamos cualquier opacidad que las haga ver descoloridas */
-    opacity: 1 !important; 
 }
 
 #facebook-box { background-color: #1877f2 !important; }
