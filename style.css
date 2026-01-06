@@ -1,67 +1,68 @@
-/* --- BASE --- */
+/* --- CONFIGURACIÓN DE FONDO --- */
 body {
-    background-color: #fce4ec;
-    background-image: url('images/fondo-dental.jpg');
-    background-attachment: fixed;
-    background-size: cover;
-    font-family: 'Arial', sans-serif;
-    line-height: 1.8; /* Arregla el texto unido */
     margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Fondo rosado con el patrón dental sutil */
+    background-color: #fce4ec; 
+    background-image: url('images/fondo-dental.jpg'); 
+    background-repeat: repeat; /* Para que el patrón cubra todo */
+    background-size: 300px; /* Ajusta este número según el tamaño de tu patrón */
 }
 
-/* --- LOGO (ELIMINAR TEXTO EXTRA) --- */
-.logo-principal {
-    width: 600px;
-    max-width: 90%;
-    clip-path: inset(42% 0 0 0); /* Corta el texto de la imagen */
-    margin-top: -80px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-header { background: #005f99; padding: 20px 0; overflow: hidden; }
-
-/* --- SECCIONES --- */
-section {
-    display: none;
-    max-width: 800px;
-    margin: 30px auto;
-    background: rgba(255, 255, 255, 0.95);
-    padding: 30px;
-    border-radius: 15px;
+/* --- HEADER Y LOGO --- */
+header {
     text-align: center;
-}
-.seccion-activa { display: block !important; }
-
-/* --- CATÁLOGO (TAMAÑO AJUSTADO) --- */
-.catalogo-container img {
-    max-width: 450px; /* Tamaño controlado */
-    width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    padding: 40px 0 20px 0;
+    background: transparent; /* En la captura el fondo es el mismo rosado */
 }
 
-/* --- INSTALACIONES --- */
-.galeria-optimizada img {
-    width: 100%;
-    max-width: 300px;
-    height: 200px;
-    object-fit: cover;
-    margin: 10px;
-    border-radius: 10px;
+header img.logo-img {
+    width: 280px; /* Tamaño similar al de la captura */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    /* Eliminamos cualquier recorte anterior para que el logo se vea completo */
+    clip-path: none; 
 }
 
-/* --- BOTONES REDES --- */
-.btn-rs {
-    display: inline-block;
-    padding: 12px 25px;
-    margin: 10px;
-    color: white;
+/* Ocultar el texto de Odonto Plus que aparece debajo del logo */
+header h1 {
+    display: none !important;
+}
+
+/* --- MENÚ DE NAVEGACIÓN (IDÉNTICO AL MODELO) --- */
+nav {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Espaciado entre opciones */
+}
+
+nav a {
     text-decoration: none;
-    border-radius: 8px;
-    font-weight: bold;
+    color: #b01e51; /* Color guinda/rosado oscuro de la captura */
+    font-weight: 600;
+    font-size: 18px;
+    transition: 0.3s;
+    padding-bottom: 5px;
 }
-.fb { background: #3b5998; }
-.ig { background: #e1306c; }
-.wa { background: #25d366; }
+
+nav a:hover {
+    border-bottom: 2px solid #b01e51; /* Efecto de línea al pasar el mouse */
+}
+
+/* --- CONTENIDO DE LAS SECCIONES --- */
+section {
+    display: none; /* Ocultas por defecto para el script */
+    max-width: 1000px;
+    margin: 40px auto;
+    background: white; /* Fondo blanco para el catálogo y textos */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.seccion-activa {
+    display: block !important;
+}
