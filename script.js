@@ -7,11 +7,9 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             const targetId = link.getAttribute('href').substring(1);
 
-            // Quitar clase activo de los links y secciones
             links.forEach(l => l.classList.remove('activo'));
             sections.forEach(s => s.classList.remove('seccion-activa'));
 
-            // Activar lo seleccionado
             link.classList.add('activo');
             document.getElementById(targetId).classList.add('seccion-activa');
 
@@ -20,13 +18,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// LÓGICA DEL CATÁLOGO
 let paginaActual = 1;
 const totalPaginas = 72;
 
 function actualizarImagen() {
-    const numeroFormateado = String(paginaActual).padStart(4, '0');
-    document.getElementById("catalogoImagen").src = `images/Catalogoodontoplus_page-${numeroFormateado}.jpg`;
+    const num = String(paginaActual).padStart(4, '0');
+    document.getElementById("catalogoImagen").src = `images/Catalogoodontoplus_page-${num}.jpg`;
     document.getElementById("paginaActual").textContent = paginaActual;
     document.getElementById("paginaInput").value = paginaActual;
 }
