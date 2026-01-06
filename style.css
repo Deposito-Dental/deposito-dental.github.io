@@ -1,106 +1,67 @@
-/* --- CONFIGURACIÓN GENERAL --- */
+/* --- BASE --- */
 body {
     background-color: #fce4ec;
     background-image: url('images/fondo-dental.jpg');
     background-attachment: fixed;
     background-size: cover;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.8; /* Arregla el texto unido */
     margin: 0;
-    line-height: 1.6; /* Soluciona el texto unido */
-    color: #333;
 }
 
-/* --- TEXTOS Y SECCIONES --- */
+/* --- LOGO (ELIMINAR TEXTO EXTRA) --- */
+.logo-principal {
+    width: 600px;
+    max-width: 90%;
+    clip-path: inset(42% 0 0 0); /* Corta el texto de la imagen */
+    margin-top: -80px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header { background: #005f99; padding: 20px 0; overflow: hidden; }
+
+/* --- SECCIONES --- */
 section {
     display: none;
-    padding: 40px;
-    max-width: 800px; /* Tamaño ideal para lectura */
+    max-width: 800px;
     margin: 30px auto;
     background: rgba(255, 255, 255, 0.95);
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    animation: fadeIn 0.5s ease;
-}
-
-.seccion-activa { display: block !important; }
-
-h2 { color: #005f99; font-size: 28px; margin-bottom: 20px; }
-
-/* Corrección para "Sobre Nosotros" */
-#nosotros p {
-    font-size: 18px;
-    margin-bottom: 15px;
-    text-align: justify;
-}
-
-/* --- CORRECCIÓN DEL CATÁLOGO (Tamaño Ajustado) --- */
-.catalogo {
+    padding: 30px;
+    border-radius: 15px;
     text-align: center;
 }
+.seccion-activa { display: block !important; }
 
-#catalogoImagen {
+/* --- CATÁLOGO (TAMAÑO AJUSTADO) --- */
+.catalogo-container img {
+    max-width: 450px; /* Tamaño controlado */
     width: 100%;
-    max-width: 500px; /* Evita que sea gigante */
-    height: auto;
-    border: 5px solid white;
+    border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    border-radius: 10px;
 }
 
-.controls {
-    margin: 20px 0;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-}
-
-.controls button {
-    background: #005f99;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-/* --- INSTALACIONES (Imágenes controladas) --- */
-.galeria {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.galeria img {
+/* --- INSTALACIONES --- */
+.galeria-optimizada img {
     width: 100%;
+    max-width: 300px;
     height: 200px;
-    object-fit: cover; /* Recorta la imagen para que todas midan igual */
-    border-radius: 12px;
-}
-
-/* --- BOTONES DE REDES SOCIALES (Atractivos) --- */
-.redes-container {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.social-box {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 15px;
-    color: white !important;
-    text-decoration: none;
-    font-weight: bold;
+    object-fit: cover;
+    margin: 10px;
     border-radius: 10px;
-    transition: transform 0.2s;
 }
 
-.social-box:hover { transform: scale(1.02); }
-
-.facebook { background: #3b5998; }
-.instagram { background: #e1306c; }
-.tiktok { background: #000000; }
-.whatsapp { background: #25d366; }
-
-@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+/* --- BOTONES REDES --- */
+.btn-rs {
+    display: inline-block;
+    padding: 12px 25px;
+    margin: 10px;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+.fb { background: #3b5998; }
+.ig { background: #e1306c; }
+.wa { background: #25d366; }
