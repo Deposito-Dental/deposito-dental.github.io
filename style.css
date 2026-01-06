@@ -10,29 +10,28 @@ body {
   background: #f8f9fa;
   color: #333;
   line-height: 1.6;
-  font-size: 17px; /* Tamaño de letra normal */
+  font-size: 17px;
 }
 
 /* 2. HEADER: MÁRGENES MÍNIMOS Y LOGO ORIGINAL */
 header {
   background-color: #005f99 !important;
   text-align: center;
-  padding: 5px 20px !important; /* Recuadro azul más delgado */
+  padding: 5px 20px !important;
 }
 
 header img {
   width: 750px !important; 
   max-width: 95% !important;
-  height: auto !important; /* Mantiene proporción del dibujo */
+  height: auto !important;
   max-height: none !important;
   display: inline-block;
-  /* Resplandor blanco para que las letras se lean sin alterar el dibujo del diente */
+  /* Resplandor para que las letras azules resalten sobre el fondo oscuro */
   filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.5)) !important;
-  margin-bottom: 5px;
 }
 
 header h1 {
-  display: none !important; /* Oculta texto repetido */
+  display: none !important;
 }
 
 nav {
@@ -48,18 +47,18 @@ nav a {
   font-size: 16px;
 }
 
-/* 3. CATÁLOGO: TAMAÑO ORIGINAL SIN DISTORSIÓN */
+/* 3. CATÁLOGO: SIN DISTORSIÓN */
 .catalogo img {
   max-width: 600px !important;
   width: 90% !important;
-  height: auto !important; /* CORRECCIÓN: Evita que se vea estirada */
+  height: auto !important; 
   border-radius: 8px;
   box-shadow: 0 6px 20px rgba(0,0,0,0.1);
   display: block;
   margin: 20px auto;
 }
 
-/* 4. REDES SOCIALES: COLORES ORIGINALES E INTENSOS */
+/* 4. REDES SOCIALES: COLORES OFICIALES INTENSOS (SIN TRANSPARENCIA) */
 .redes-container {
     display: flex;
     justify-content: center;
@@ -72,44 +71,48 @@ nav a {
     display: inline-block !important;
     padding: 12px 22px !important;
     margin: 5px 10px !important;
-    color: white !important;
+    color: #FFFFFF !important; /* Blanco puro para el texto */
     font-weight: bold !important;
     text-decoration: none !important;
     border-radius: 8px !important;
     min-width: 150px;
     text-align: center;
+    
     /* ELIMINA LO DESCOLORIDO */
     opacity: 1 !important; 
     visibility: visible !important;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3) !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4) !important;
     transition: transform 0.2s ease;
 }
 
-/* Colores de Marca Exactos */
+/* Facebook: Azul Oficial Intenso */
 #facebook-box { 
     background-color: #1877F2 !important; 
 }
 
-/* Instagram: Degradado Oficial Intenso */
+/* Instagram: Gradiente Oficial Vibrante */
 #instagram-box { 
-    background: #d6249f !important;
-    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%) !important;
+    background: #f09433 !important;
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%) !important;
 }
 
+/* TikTok: Negro Puro Brillante */
 #tiktok-box { 
     background-color: #000000 !important; 
+    border: 1px solid #333;
 }
 
+/* WhatsApp: Verde Oficial Vibrante */
 #whatsapp-box { 
     background-color: #25D366 !important; 
 }
 
 .social-box:hover {
-    transform: scale(1.05);
+    transform: scale(1.08);
     filter: brightness(1.1);
 }
 
-/* 5. SECCIONES */
+/* 5. SECCIONES GENERALES */
 section {
   padding: 30px 20px;
   max-width: 1100px;
