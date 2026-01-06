@@ -9,11 +9,11 @@ body {
     font-family: 'Roboto', Arial, sans-serif;
     background: #f8f9fa;
     color: #333;
-    font-size: 19px; /* Texto grande y legible */
-    line-height: 1.8; /* Espaciado para evitar fatiga visual */
+    font-size: 19px; /* Texto más grande para lectura cómoda */
+    line-height: 1.8; /* Espacio entre líneas para evitar fatiga */
 }
 
-/* 2. HEADER Y LOGOTIPO (LETRAS BLANCAS, DIENTE INTACTO) */
+/* 2. HEADER Y LOGOTIPO (MODIFICACIÓN ESPECÍFICA) */
 header {
     background-color: #005f99 !important;
     text-align: center;
@@ -25,11 +25,16 @@ header img {
     max-width: 90%;
     height: auto !important;
     display: inline-block;
-    /* Ajuste para que las letras celestes se vean blancas */
-    /* El contraste alto limpia el celeste y el brillo las hace resaltar */
-    filter: brightness(1.3) contrast(1.6);
-    /* Sombra suave blanca para dar nitidez solo a las letras */
-    filter: drop-shadow(0px 0px 1px rgba(255, 255, 255, 0.9));
+    
+    /* ESTO CONVIERTE LAS LETRAS CELESTES EN BLANCAS */
+    /* Subimos el brillo al máximo para que el celeste pase a blanco */
+    /* y ajustamos el contraste para que el dibujo del diente no pierda su forma */
+    filter: brightness(2.5) contrast(1.2);
+    
+    /* Agregamos una sombra blanca muy fina para asegurar que las letras 
+       se vean nítidas y sólidas sobre el fondo azul */
+    filter: drop-shadow(0px 0px 1px rgba(255, 255, 255, 1));
+    
     margin-bottom: 15px;
 }
 
@@ -45,7 +50,7 @@ nav a {
     font-size: 18px;
 }
 
-/* 3. SECCIONES Y TEXTOS (ESPACIADO PROFESIONAL) */
+/* 3. SECCIONES Y TEXTOS (MÁS ESPACIO Y MEJOR VISIBILIDAD) */
 section {
     padding: 70px 20px; 
     max-width: 1000px;
@@ -61,10 +66,10 @@ h2 {
 }
 
 p {
-    margin-bottom: 25px; /* Más espacio entre párrafos */
+    margin-bottom: 25px; 
 }
 
-/* 4. CATÁLOGO EQUILIBRADO Y BOTONES LLAMATIVOS */
+/* 4. CATÁLOGO Y CONTROLES GRANDES */
 .catalogo {
     text-align: center;
 }
@@ -95,19 +100,19 @@ p {
     font-weight: bold;
     border-radius: 10px;
     cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
 .controls input#paginaInput {
-    width: 90px;
+    width: 100px;
     height: 60px;
-    font-size: 24px;
+    font-size: 26px;
     text-align: center;
     border: 2px solid #005f99;
     border-radius: 10px;
+    font-weight: bold;
 }
 
-/* 5. INSTALACIONES (REDUCIDAS Y ESTÉTICAS) */
+/* 5. INSTALACIONES (TAMAÑO REDUCIDO Y ESTÉTICO) */
 #instalaciones {
     text-align: center;
 }
@@ -139,7 +144,6 @@ p {
     border-radius: 10px;
     min-width: 150px;
     text-align: center;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
 #facebook-box { background-color: #1877F2 !important; }
@@ -147,7 +151,7 @@ p {
 #tiktok-box { background-color: #000000 !important; }
 #whatsapp-box { background-color: #25D366 !important; }
 
-/* 7. PIE DE PÁGINA */
+/* 7. FOOTER */
 footer {
     background-color: #005f99;
     color: white;
@@ -156,7 +160,6 @@ footer {
     margin-top: 60px;
 }
 
-/* RESPONSIVE MÓVIL */
 @media (max-width: 768px) {
     #instalaciones img {
         width: 90% !important;
