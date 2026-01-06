@@ -1,4 +1,4 @@
-/* 1. CONFIGURACIÓN GENERAL Y TIPOGRAFÍA */
+/* 1. CONFIGURACIÓN GENERAL */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -13,11 +13,13 @@ body {
     line-height: 1.8; 
 }
 
-/* 2. HEADER Y LOGOTIPO (INTENTO DE BLANQUEO MÁXIMO) */
+/* 2. HEADER CON FONDO ROSADO (PARA RESALTAR EL LOGO) */
 header {
-    background-color: #005f99 !important;
+    /* Un rosado suave y profesional que no cansa la vista */
+    background-color: #fce4ec !important; 
     text-align: center;
-    padding: 25px 0px !important;
+    padding: 30px 0px !important;
+    border-bottom: 2px solid #f8bbd0;
 }
 
 header img {
@@ -25,30 +27,21 @@ header img {
     max-width: 90%;
     height: auto !important;
     display: inline-block;
-    
-    /* TRUCO TÉCNICO: Forzamos el blanqueo del canal celeste */
-    /* Saturamos el brillo para que el celeste se pierda en blanco */
-    filter: brightness(3) contrast(1.1) saturate(0);
-    
-    /* Agregamos una sombra proyectada blanca para que el texto sea nítido */
-    filter: drop-shadow(0px 0px 1px #ffffff) drop-shadow(0px 0px 1px #ffffff);
-    
+    /* Al ser fondo claro, las letras celestes se verán naturales e intactas */
+    filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.1));
     margin-bottom: 15px;
 }
 
-header h1 {
-    display: none !important;
-}
-
+/* Ajuste de los enlaces de navegación para que se vean sobre el rosado */
 nav a {
-    color: white !important;
+    color: #c2185b !important; /* Un tono cereza oscuro para que resalte */
     margin: 0 20px;
     text-decoration: none;
     font-weight: bold;
     font-size: 18px;
 }
 
-/* 3. SECCIONES Y TEXTOS CON ESPACIO PROFESIONAL */
+/* 3. SECCIONES CON ESPACIO AMPLIO */
 section {
     padding: 70px 20px; 
     max-width: 1000px;
@@ -56,10 +49,10 @@ section {
 }
 
 h2 {
-    color: #005f99;
+    color: #c2185b; /* Combinando con el estilo rosado/dental */
     font-size: 34px;
     margin-bottom: 30px;
-    border-left: 6px solid #005f99;
+    border-left: 6px solid #f06292;
     padding-left: 15px;
 }
 
@@ -67,7 +60,7 @@ p {
     margin-bottom: 25px; 
 }
 
-/* 4. CATÁLOGO EQUILIBRADO Y BOTONES */
+/* 4. CATÁLOGO Y CONTROLES GRANDES */
 .catalogo {
     text-align: center;
 }
@@ -86,30 +79,32 @@ p {
     justify-content: center;
     align-items: center;
     gap: 20px;
-    margin: 30px 0;
+    margin: 40px 0;
 }
 
 .controls button {
-    background-color: #005f99;
-    color: white;
+    background-color: #c2185b;
+    color: white !important;
     border: none;
-    padding: 15px 30px;
+    padding: 15px 35px;
     font-size: 18px;
     font-weight: bold;
     border-radius: 10px;
     cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
 .controls input#paginaInput {
     width: 100px;
-    height: 60px;
-    font-size: 26px;
+    height: 65px;
+    font-size: 28px;
     text-align: center;
-    border: 2px solid #005f99;
-    border-radius: 10px;
+    border: 3px solid #f06292;
+    border-radius: 12px;
+    font-weight: bold;
 }
 
-/* 5. INSTALACIONES REDUCIDAS */
+/* 5. INSTALACIONES (REDUCIDAS) */
 #instalaciones {
     text-align: center;
 }
@@ -139,7 +134,7 @@ p {
     font-weight: bold;
     text-decoration: none;
     border-radius: 10px;
-    min-width: 150px;
+    min-width: 160px;
     text-align: center;
 }
 
@@ -150,16 +145,9 @@ p {
 
 /* 7. FOOTER */
 footer {
-    background-color: #005f99;
+    background-color: #c2185b;
     color: white;
     text-align: center;
     padding: 40px;
     margin-top: 60px;
-}
-
-@media (max-width: 768px) {
-    #instalaciones img {
-        width: 90% !important;
-        height: auto !important;
-    }
 }
