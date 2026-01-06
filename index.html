@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <link rel="stylesheet" href="style.css?v=202506">
+  <title>Odonto Plus +</title>
+  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
@@ -21,7 +21,7 @@
     </nav>
   </header>
 
-  <section id="inicio">
+  <section id="inicio" class="seccion-activa">
     <h2>Bienvenidos a Odonto Plus +</h2>
     <p>Excelencia clínica entregada. Tu socio estratégico en suministros dentales de calidad.</p>
   </section>
@@ -49,85 +49,48 @@
 
   <section id="instalaciones">
     <h2>Nuestras Instalaciones</h2>
-    <img src="images/interno1.jpg" alt="Instalación 1" style="max-width:45%; margin:10px;" loading="lazy">
-    <img src="images/interno2.jpg" alt="Instalación 2" style="max-width:45%; margin:10px;" loading="lazy">
-    <img src="images/local1.jpg" alt="Vista exterior del local" style="max-width:45%; margin:10px;" loading="lazy">
+    <div class="galeria">
+        <img src="images/interno1.jpg" alt="Instalación 1" loading="lazy">
+        <img src="images/interno2.jpg" alt="Instalación 2" loading="lazy">
+        <img src="images/local1.jpg" alt="Vista exterior del local" loading="lazy">
+    </div>
   </section>
 
   <section id="redes">
     <h2>Dirección</h2>
-    <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 25px; background: #f1f1f1; padding: 15px; border-radius: 8px;">
-        <a href="https://www.google.com/maps/search/?api=1&query=2Q3R%2BP5%2C%20Loja" target="_blank" style="color: #d32f2f; font-size: 28px; text-decoration: none;">
+    <div class="map-container">
+        <a href="https://maps.google.com" target="_blank" class="map-icon">
             <i class="fas fa-map-marker-alt"></i>
         </a>
         <div>
-            <p style="margin: 0; font-weight: bold; color: #333;">Ubícanos entre:</p>
-            <p style="margin: 5px 0;">Eplicachima y Mariano Samaniego, Barrio El Pedestal, Loja - Ecuador, Código Postal 110103</p>
-            <a href="https://www.google.com/maps/search/?api=1&query=2Q3R%2BP5%2C%20Loja" target="_blank" style="color: #005f99; font-size: 0.9em; font-weight: bold; text-decoration: underline;">
-                Ver en Google Maps
-            </a>
+            <p><strong>Ubícanos entre:</strong></p>
+            <p>Eplicachima y Mariano Samaniego, Barrio El Pedestal, Loja - Ecuador</p>
+            <a href="https://maps.google.com" target="_blank" class="map-link">Ver en Google Maps</a>
         </div>
     </div>
     
     <p><strong>Síguenos en nuestras Redes Sociales:</strong></p>
     <div class="redes-container">
-        <a href="https://www.facebook.com/share/1ASGabaQ2s/" target="_blank" id="facebook-box" class="social-box">
+        <a href="https://www.facebook.com/share/1ASGabaQ2s/" target="_blank" class="social-box facebook">
             <i class="fab fa-facebook-f"></i> Facebook
         </a>
-        <a href="https://www.instagram.com/odontoplus24" target="_blank" id="instagram-box" class="social-box">
+        <a href="https://www.instagram.com/odontoplus24" target="_blank" class="social-box instagram">
             <i class="fab fa-instagram"></i> Instagram
         </a>
-        <a href="https://www.tiktok.com/@odontoplus24" target="_blank" id="tiktok-box" class="social-box">
+        <a href="https://www.tiktok.com/@odontoplus24" target="_blank" class="social-box tiktok">
             <i class="fab fa-tiktok"></i> TikTok
         </a>
-        <a href="https://wa.me/593989266227" target="_blank" id="whatsapp-box" class="social-box">
+        <a href="https://wa.me/593989266227" target="_blank" class="social-box whatsapp">
             <i class="fab fa-whatsapp"></i> WhatsApp
         </a>
     </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 Odonto Plus + Depósito Dental | Excelencia Clínica. Todos los derechos reservados.</p>
+    <p>© 2025 Odonto Plus + Depósito Dental | Excelencia Clínica.</p>
   </footer>
 
-  <script>
-    let paginaActual = 1;
-    const totalPaginas = 72;
-
-    function obtenerRuta(numeroPagina) {
-        return `images/Catalogoodontoplus_page-${String(numeroPagina).padStart(4,'0')}.jpg`;
-    }
-
-    function actualizarImagen() {
-        document.getElementById("catalogoImagen").src = obtenerRuta(paginaActual);
-        document.getElementById("paginaActual").textContent = paginaActual;
-        document.getElementById("paginaInput").value = paginaActual;
-    }
-
-    function siguientePagina() {
-      if (paginaActual < totalPaginas) {
-        paginaActual++;
-        actualizarImagen();
-      }
-    }
-
-    function anteriorPagina() {
-      if (paginaActual > 1) {
-        paginaActual--;
-        actualizarImagen();
-      }
-    }
-
-    function irAPagina() {
-      const pagina = parseInt(document.getElementById("paginaInput").value);
-      if (pagina >= 1 && pagina <= totalPaginas) {
-        paginaActual = pagina;
-        actualizarImagen();
-      } else {
-        alert("Por favor ingrese un número de página válido entre 1 y 72");
-      }
-    }
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
 
