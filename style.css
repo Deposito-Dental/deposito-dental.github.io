@@ -9,11 +9,11 @@ body {
     font-family: 'Roboto', Arial, sans-serif;
     background: #f8f9fa;
     color: #333;
-    font-size: 19px; /* Texto más grande para lectura cómoda */
-    line-height: 1.8; /* Espacio entre líneas para evitar fatiga */
+    font-size: 19px; 
+    line-height: 1.8; 
 }
 
-/* 2. HEADER Y LOGOTIPO (LETRAS EN BLANCO RESALTADO) */
+/* 2. HEADER Y LOGOTIPO (LETRAS BLANCAS Y DIENTE ORIGINAL) */
 header {
     background-color: #005f99 !important;
     text-align: center;
@@ -25,17 +25,16 @@ header img {
     max-width: 90%;
     height: auto !important;
     display: inline-block;
-    /* FILTRO PARA PONER LAS LETRAS EN BLANCO Y DARLES BRILLO */
-    filter: brightness(0) invert(1) drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.5));
+    /* FILTRO ESPECIAL: Convierte el celeste de las letras en BLANCO 
+       manteniendo los colores del diente lo más fieles posible */
+    filter: brightness(2) contrast(1.5);
+    /* Resplandor suave para definir bien las letras blancas */
+    filter: drop-shadow(0px 0px 2px rgba(255, 255, 255, 0.8));
     margin-bottom: 15px;
 }
 
 header h1 {
     display: none !important;
-}
-
-nav {
-    margin-top: 10px;
 }
 
 nav a {
@@ -46,9 +45,9 @@ nav a {
     font-size: 18px;
 }
 
-/* 3. SECCIONES Y TEXTOS CON ESPACIO PROFESIONAL */
+/* 3. SECCIONES Y TEXTOS (ESPACIADO AMPLIO Y PROFESIONAL) */
 section {
-    padding: 70px 20px; /* Más espacio entre apartados */
+    padding: 70px 20px; 
     max-width: 1000px;
     margin: auto;
 }
@@ -62,10 +61,10 @@ h2 {
 }
 
 p {
-    margin-bottom: 25px; /* Espacio generoso entre párrafos */
+    margin-bottom: 25px; 
 }
 
-/* 4. CATÁLOGO EQUILIBRADO */
+/* 4. CATÁLOGO EQUILIBRADO Y BOTONES LLAMATIVOS */
 .catalogo {
     text-align: center;
 }
@@ -79,7 +78,6 @@ p {
     margin: 0 auto 30px auto;
 }
 
-/* CONTROLES DEL CATÁLOGO */
 .controls {
     display: flex;
     justify-content: center;
@@ -97,6 +95,7 @@ p {
     font-weight: bold;
     border-radius: 10px;
     cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
 .controls input#paginaInput {
@@ -108,7 +107,7 @@ p {
     border-radius: 10px;
 }
 
-/* 5. INSTALACIONES REDUCIDAS Y ESTÉTICAS */
+/* 5. INSTALACIONES (REDUCIDAS Y ALINEADAS) */
 #instalaciones {
     text-align: center;
 }
@@ -123,7 +122,7 @@ p {
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-/* 6. REDES SOCIALES Y MAPA */
+/* 6. REDES SOCIALES (COLORES INTENSOS) */
 .redes-container {
     display: flex;
     justify-content: center;
@@ -157,7 +156,7 @@ footer {
     margin-top: 60px;
 }
 
-/* AJUSTE PARA MÓVILES */
+/* RESPONSIVE PARA MÓVILES */
 @media (max-width: 768px) {
     #instalaciones img {
         width: 90% !important;
