@@ -1,64 +1,109 @@
-/* 1. RESET Y CONFIGURACIÓN BASE */
+/* 1. CONFIGURACIÓN GENERAL */
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-  font-family: 'Roboto', Arial, sans-serif;
-  background: #f8f9fa;
-  color: #333;
-  line-height: 1.6;
-  font-size: 17px;
+    font-family: 'Roboto', Arial, sans-serif;
+    background: #f8f9fa;
+    color: #333;
+    font-size: 17px;
+    line-height: 1.6;
 }
 
-/* 2. HEADER: MÁRGENES MÍNIMOS Y LOGO ORIGINAL */
+/* 2. HEADER Y LOGO (MANTENIENDO EL DIENTE ORIGINAL) */
 header {
-  background-color: #005f99 !important;
-  text-align: center;
-  padding: 5px 20px !important;
+    background-color: #005f99 !important;
+    text-align: center;
+    padding: 5px 0px !important;
 }
 
 header img {
-  width: 750px !important; 
-  max-width: 95% !important;
-  height: auto !important;
-  max-height: none !important;
-  display: inline-block;
-  /* Resplandor para que las letras azules resalten sobre el fondo oscuro */
-  filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.5)) !important;
+    width: 750px !important;
+    max-width: 95%;
+    height: auto !important;
+    display: inline-block;
+    filter: drop-shadow(0px 0px 8px rgba(255, 255, 255, 0.4));
 }
 
 header h1 {
-  display: none !important;
+    display: none !important;
 }
 
 nav {
-  margin-top: 5px;
-  padding-bottom: 10px;
+    margin-top: 5px;
+    padding-bottom: 10px;
 }
 
 nav a {
-  color: white !important;
-  margin: 0 15px;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 16px;
+    color: white !important;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-/* 3. CATÁLOGO: SIN DISTORSIÓN */
+/* 3. CATÁLOGO E IMAGEN */
+.catalogo {
+    text-align: center;
+}
+
 .catalogo img {
-  max-width: 600px !important;
-  width: 90% !important;
-  height: auto !important; 
-  border-radius: 8px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-  display: block;
-  margin: 20px auto;
+    max-width: 650px !important;
+    width: 95% !important;
+    height: auto !important;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 }
 
-/* 4. REDES SOCIALES: COLORES OFICIALES INTENSOS (SIN TRANSPARENCIA) */
+/* 4. CONTROLES DEL CATÁLOGO (GIGANTES Y LLAMATIVOS) */
+.controls {
+    margin: 40px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Botones Anterior, Ir y Siguiente */
+.controls button {
+    background: linear-gradient(135deg, #005f99 0%, #0088cc 100%);
+    color: white !important;
+    border: none;
+    padding: 20px 40px; /* Tamaño gigante */
+    font-size: 20px; /* Letra grande */
+    font-weight: bold;
+    border-radius: 15px;
+    cursor: pointer;
+    text-transform: uppercase;
+    box-shadow: 0 8px 20px rgba(0, 80, 150, 0.3);
+    transition: all 0.3s ease;
+}
+
+.controls button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px rgba(0, 80, 150, 0.4);
+    filter: brightness(1.1);
+}
+
+/* EL CUADRO DE NÚMERO (INPUT) GIGANTE */
+.controls input#paginaInput {
+    width: 110px; /* Muy ancho */
+    height: 70px; /* Muy alto */
+    font-size: 30px; /* Números muy grandes */
+    font-weight: bold;
+    color: #005f99;
+    border: 4px solid #005f99;
+    border-radius: 15px;
+    text-align: center;
+    background-color: #ffffff;
+    outline: none;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* 5. REDES SOCIALES (COLORES ORIGINALES INTENSOS) */
 .redes-container {
     display: flex;
     justify-content: center;
@@ -69,52 +114,60 @@ nav a {
 
 .social-box {
     display: inline-block !important;
-    padding: 12px 22px !important;
-    margin: 5px 10px !important;
-    color: #FFFFFF !important; /* Blanco puro para el texto */
+    padding: 15px 25px !important;
+    color: white !important;
     font-weight: bold !important;
     text-decoration: none !important;
-    border-radius: 8px !important;
-    min-width: 150px;
+    border-radius: 10px !important;
+    min-width: 160px;
     text-align: center;
-    
-    /* ELIMINA LO DESCOLORIDO */
-    opacity: 1 !important; 
-    visibility: visible !important;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.4) !important;
+    opacity: 1 !important; /* Cero transparencia */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3) !important;
     transition: transform 0.2s ease;
 }
 
-/* Facebook: Azul Oficial Intenso */
-#facebook-box { 
-    background-color: #1877F2 !important; 
-}
+#facebook-box { background-color: #1877F2 !important; }
 
-/* Instagram: Gradiente Oficial Vibrante */
 #instagram-box { 
-    background: #f09433 !important;
     background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%) !important;
 }
 
-/* TikTok: Negro Puro Brillante */
-#tiktok-box { 
-    background-color: #000000 !important; 
-    border: 1px solid #333;
-}
+#tiktok-box { background-color: #000000 !important; }
 
-/* WhatsApp: Verde Oficial Vibrante */
-#whatsapp-box { 
-    background-color: #25D366 !important; 
-}
+#whatsapp-box { background-color: #25D366 !important; }
 
 .social-box:hover {
-    transform: scale(1.08);
+    transform: scale(1.1);
     filter: brightness(1.1);
 }
 
-/* 5. SECCIONES GENERALES */
-section {
-  padding: 30px 20px;
-  max-width: 1100px;
-  margin: auto;
+/* 6. APARTADO DIRECCIÓN Y MAPA */
+.direccion-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: #eee;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.map-icon {
+    color: #d32f2f;
+    font-size: 35px;
+    text-decoration: none;
+}
+
+.map-link {
+    color: #005f99;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #005f99;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
 }
