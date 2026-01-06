@@ -15,47 +15,53 @@
 
     <nav>
       <a href="#inicio" class="nav-link activo">Inicio</a>
-      <a href="#nosotros" class="nav-link">Nosotros</a>
-      <a href="#productos" class="nav-link">Productos</a>
-      <a href="#instalaciones" class="nav-link">Instalaciones</a>
-      <a href="#redes" class="nav-link">Redes Sociales</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#productos">Productos</a>
+      <a href="#instalaciones">Instalaciones</a>
+      <a href="#redes">Redes Sociales</a>
     </nav>
   </header>
 
   <section id="inicio" class="seccion-activa">
-    <h2 style="color: #b01e51; border-bottom: 1px solid #fce4ec; padding-bottom: 10px;">CATÁLOGO</h2>
-    <div class="catalogo-box">
-      <img id="catalogoImagen" src="images/Catalogoodontoplus_page-0001.jpg" alt="Catálogo">
-      
-      <div class="controles">
-        <button onclick="anteriorPagina()"><i class="fas fa-chevron-left"></i></button>
-        <input type="number" id="paginaInput" min="1" max="72" value="1" style="width: 50px; text-align: center; padding: 5px;">
-        <button onclick="irAPagina()">Ir</button>
-        <button onclick="siguientePagina()"><i class="fas fa-chevron-right"></i></button>
-      </div>
-      <p style="color: #666; margin-top: 15px;">Página <span id="paginaActual">1</span> de 72</p>
-    </div>
+    <h2 style="color: #b01e51;">Bienvenidos</h2>
+    <p>Excelencia clínica entregada. Tu socio estratégico en suministros dentales de calidad en Loja, Ecuador.</p>
+    <img src="images/local1.jpg" style="width:100%; border-radius:8px; margin-top:15px;">
   </section>
 
   <section id="nosotros">
     <h2 style="color: #b01e51;">Sobre Nosotros</h2>
-    <p style="line-height: 1.8;">En el núcleo de Depósito Dental Odonto Plus + hallará una visión clara: la Odontología profesional merece un proveedor que opere sin fallos.</p>
+    <p>En Odonto Plus + hallará una visión clara: la Odontología profesional merece un proveedor que opere sin fallos.</p>
+    <p>Trabajamos para ser el aliado estratégico que su clínica necesita.</p>
+  </section>
+
+  <section id="productos">
+    <h2 style="color: #b01e51;">Catálogo de Productos</h2>
+    <div style="text-align: center;">
+      <img id="catalogoImagen" src="images/Catalogoodontoplus_page-0001.jpg" style="max-width: 450px; width:100%; border: 1px solid #ddd;">
+      <div style="margin-top: 20px;">
+        <button onclick="anteriorPagina()" style="padding: 10px 20px; cursor:pointer;">Anterior</button>
+        <button onclick="siguientePagina()" style="padding: 10px 20px; cursor:pointer;">Siguiente</button>
+      </div>
+      <p>Página <span id="paginaActual">1</span> de 72</p>
+    </div>
   </section>
 
   <section id="instalaciones">
-    <h2 style="color: #b01e51;">Instalaciones</h2>
-    <div style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
-        <img src="images/interno1.jpg" style="width: 250px; height: 180px; object-fit: cover; border-radius: 4px;">
-        <img src="images/interno2.jpg" style="width: 250px; height: 180px; object-fit: cover; border-radius: 4px;">
-        <img src="images/local1.jpg" style="width: 250px; height: 180px; object-fit: cover; border-radius: 4px;">
+    <h2 style="color: #b01e51;">Nuestras Instalaciones</h2>
+    <div class="galeria-grid">
+        <img src="images/interno1.jpg">
+        <img src="images/interno2.jpg">
+        <img src="images/local1.jpg">
     </div>
   </section>
 
   <section id="redes">
-    <h2 style="color: #b01e51;">Redes Sociales</h2>
-    <div style="display: flex; flex-direction: column; gap: 10px; max-width: 300px; margin: 0 auto;">
-        <a href="https://wa.me/593989266227" target="_blank" style="background:#25d366; color:white; padding:12px; text-decoration:none; border-radius:5px; text-align:center;">WhatsApp</a>
-        <a href="https://www.facebook.com/share/1ASGabaQ2s/" target="_blank" style="background:#3b5998; color:white; padding:12px; text-decoration:none; border-radius:5px; text-align:center;">Facebook</a>
+    <h2 style="color: #b01e51;">Contacto</h2>
+    <p>Síguenos en nuestras plataformas digitales:</p>
+    <div style="display: flex; flex-direction: column; gap: 10px; max-width: 250px;">
+        <a href="https://wa.me/593989266227" target="_blank" style="background:#25d366; color:white; padding:10px; text-align:center; text-decoration:none; border-radius:5px;">WhatsApp</a>
+        <a href="https://www.facebook.com/share/1ASGabaQ2s/" target="_blank" style="background:#3b5998; color:white; padding:10px; text-align:center; text-decoration:none; border-radius:5px;">Facebook</a>
+        <a href="https://www.instagram.com/odontoplus24" target="_blank" style="background:#e1306c; color:white; padding:10px; text-align:center; text-decoration:none; border-radius:5px;">Instagram</a>
     </div>
   </section>
 
