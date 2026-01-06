@@ -1,89 +1,75 @@
-/* --- FONDO ROSADO PASTEL LIMPIO --- */
+/* --- FONDO ROSADO PASTEL --- */
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #fce4ec; /* Rosado Pastel suave */
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #fce4ec; /* Color Rosado Pastel */
     color: #333;
 }
 
-/* --- LOGO Y CABECERA --- */
 header {
     text-align: center;
-    padding: 50px 20px 20px;
+    padding: 40px 20px;
 }
 
 .logo-img {
-    width: 320px; /* Tamaño profesional */
+    width: 300px;
     height: auto;
     display: block;
     margin: 0 auto;
 }
 
-/* Ocultar el texto que no quieres */
+/* Ocultar el texto innecesario */
 .texto-a-borrar {
     display: none !important;
 }
 
-/* --- MENÚ DE NAVEGACIÓN --- */
+/* --- MENÚ --- */
 nav {
     display: flex;
     justify-content: center;
     gap: 30px;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 nav a {
     text-decoration: none;
-    color: #b01e51; /* Color guinda como en tu captura */
-    font-weight: 600;
+    color: #b01e51; /* Color guinda */
+    font-weight: bold;
     font-size: 18px;
     padding-bottom: 5px;
-    transition: 0.3s;
 }
 
-/* Línea roja debajo de la opción activa */
 .nav-link.activo {
     border-bottom: 3px solid #b01e51;
 }
 
-/* --- SECCIONES (El cuadro blanco limpio) --- */
+/* --- CUADRO BLANCO DE CONTENIDO --- */
 section {
-    display: none;
+    display: none; /* Oculto por defecto */
     max-width: 900px;
-    margin: 30px auto;
-    background: #ffffff; /* Blanco puro para resaltar */
+    margin: 20px auto;
+    background: white;
     padding: 40px;
-    border-radius: 5px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
 .seccion-activa {
     display: block !important;
 }
 
-/* --- CATÁLOGO --- */
-.catalogo-box {
-    text-align: center;
+/* --- ESTILO DE IMÁGENES --- */
+.galeria-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
 }
 
-#catalogoImagen {
-    max-width: 500px;
-    width: 100%;
-    height: auto;
-    border-radius: 4px;
-    border: 1px solid #eee;
-}
-
-.controles {
-    margin-top: 20px;
-}
-
-.controles button {
-    background: #b01e51;
-    color: white;
-    border: none;
-    padding: 8px 15px;
-    border-radius: 4px;
-    cursor: pointer;
+.galeria-grid img {
+    width: 280px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
 }
