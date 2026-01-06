@@ -1,95 +1,106 @@
-/* --- CONFIGURACIÓN DE FONDO Y CUERPO --- */
+/* --- CONFIGURACIÓN GENERAL --- */
 body {
-    background-color: #fce4ec; /* Rosado Pastel */
-    background-image: url('images/fondo-dental.jpg'); /* Tu imagen de fondo */
+    background-color: #fce4ec;
+    background-image: url('images/fondo-dental.jpg');
     background-attachment: fixed;
     background-size: cover;
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
+    line-height: 1.6; /* Soluciona el texto unido */
     color: #333;
 }
 
-/* --- CABECERA Y LOGO --- */
-header {
-    background-color: #005f99 !important;
-    padding: 20px 0 !important;
-    text-align: center;
-    overflow: hidden; /* Importante para el recorte del logo */
-}
-
-header img {
-    width: 600px !important;
-    max-width: 90%;
-    height: auto;
-    display: inline-block;
-    
-    /* RECORTE PARA BORRAR "Odonto Plus + Depósito Dental" DE LA IMAGEN */
-    /* Cortamos el 42% superior para que solo quede el logo principal */
-    clip-path: inset(42% 0 0 0); 
-    margin-top: -80px; /* Ajusta este valor para centrar el logo recortado */
-    
-    /* Filtro para resaltar el blanco */
-    filter: brightness(1.2) contrast(1.1);
-}
-
-/* --- NAVEGACIÓN --- */
-nav {
-    margin-top: 10px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-nav a:hover {
-    color: #fce4ec;
-}
-
-/* --- SISTEMA DE SECCIONES (SIN SCROLL) --- */
+/* --- TEXTOS Y SECCIONES --- */
 section {
-    display: none; /* Ocultas por defecto */
+    display: none;
     padding: 40px;
-    max-width: 900px;
-    margin: 20px auto;
-    background: rgba(255, 255, 255, 0.9); /* Fondo blanco traslúcido */
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    max-width: 800px; /* Tamaño ideal para lectura */
+    margin: 30px auto;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     animation: fadeIn 0.5s ease;
 }
 
-/* Esta clase la activa el JavaScript */
-.seccion-activa {
-    display: block !important;
+.seccion-activa { display: block !important; }
+
+h2 { color: #005f99; font-size: 28px; margin-bottom: 20px; }
+
+/* Corrección para "Sobre Nosotros" */
+#nosotros p {
+    font-size: 18px;
+    margin-bottom: 15px;
+    text-align: justify;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+/* --- CORRECCIÓN DEL CATÁLOGO (Tamaño Ajustado) --- */
+.catalogo {
+    text-align: center;
 }
 
-/* --- GALERÍA DE INSTALACIONES --- */
-.galeria {
+#catalogoImagen {
+    width: 100%;
+    max-width: 500px; /* Evita que sea gigante */
+    height: auto;
+    border: 5px solid white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    border-radius: 10px;
+}
+
+.controls {
+    margin: 20px 0;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 15px;
+    gap: 10px;
+}
+
+.controls button {
+    background: #005f99;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* --- INSTALACIONES (Imágenes controladas) --- */
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
 }
 
 .galeria img {
-    max-width: 45%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Recorta la imagen para que todas midan igual */
+    border-radius: 12px;
 }
 
-/* --- PIE DE PÁGINA --- */
-footer {
-    text-align: center;
-    padding: 20px;
-    color: #555;
-    font-size: 0.9em;
+/* --- BOTONES DE REDES SOCIALES (Atractivos) --- */
+.redes-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
+
+.social-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    color: white !important;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: transform 0.2s;
+}
+
+.social-box:hover { transform: scale(1.02); }
+
+.facebook { background: #3b5998; }
+.instagram { background: #e1306c; }
+.tiktok { background: #000000; }
+.whatsapp { background: #25d366; }
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
