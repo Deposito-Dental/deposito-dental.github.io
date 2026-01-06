@@ -6,6 +6,7 @@ document.querySelectorAll('.nav-link').forEach(link => {
         this.classList.add('activo');
         const target = this.getAttribute('href');
         document.querySelector(target).classList.add('seccion-activa');
+        window.scrollTo(0, 0);
     });
 });
 
@@ -14,7 +15,6 @@ function actualizar() {
     const num = String(pagina).padStart(4, '0');
     document.getElementById("catalogoImagen").src = `images/Catalogoodontoplus_page-${num}.jpg`;
     document.getElementById("paginaInput").value = pagina;
-    document.getElementById("paginaActual").textContent = pagina;
 }
 function siguientePagina() { if(pagina < 72) { pagina++; actualizar(); } }
 function anteriorPagina() { if(pagina > 1) { pagina--; actualizar(); } }
