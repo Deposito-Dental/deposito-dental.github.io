@@ -23,23 +23,40 @@
   </header>
 
   <section id="inicio" class="seccion-activa">
-    <h2 style="color: #a61d4d; border-bottom: 1px solid #eee; padding-bottom: 10px;">CATÁLOGO</h2>
+    <h2 style="color: #b01e51; border-bottom: 1px solid #fce4ec; padding-bottom: 10px;">CATÁLOGO</h2>
     <div class="catalogo-box">
       <img id="catalogoImagen" src="images/Catalogoodontoplus_page-0001.jpg" alt="Catálogo">
       
       <div class="controles">
-        <button onclick="anteriorPagina()" style="background:none; border:none; cursor:pointer; font-size: 24px;"><i class="fas fa-chevron-left"></i></button>
-        <input type="number" id="paginaInput" min="1" max="72" value="1" style="width: 50px; text-align: center;">
-        <button onclick="irAPagina()" style="background:#a61d4d; color:white; border:none; padding: 5px 15px; cursor:pointer;">Ir</button>
-        <button onclick="siguientePagina()" style="background:none; border:none; cursor:pointer; font-size: 24px;"><i class="fas fa-chevron-right"></i></button>
+        <button onclick="anteriorPagina()"><i class="fas fa-chevron-left"></i></button>
+        <input type="number" id="paginaInput" min="1" max="72" value="1" style="width: 50px; text-align: center; padding: 5px;">
+        <button onclick="irAPagina()">Ir</button>
+        <button onclick="siguientePagina()"><i class="fas fa-chevron-right"></i></button>
       </div>
-      <p style="color: #666;">Página <span id="paginaActual">1</span> de 72</p>
+      <p style="color: #666; margin-top: 15px;">Página <span id="paginaActual">1</span> de 72</p>
     </div>
   </section>
 
   <section id="nosotros">
-    <h2 style="color: #a61d4d;">Nosotros</h2>
-    <p style="line-height: 1.8;">En Odonto Plus + nos dedicamos a ofrecer insumos odontológicos de la más alta calidad.</p>
+    <h2 style="color: #b01e51;">Sobre Nosotros</h2>
+    <p style="line-height: 1.8;">En el núcleo de Depósito Dental Odonto Plus + hallará una visión clara: la Odontología profesional merece un proveedor que opere sin fallos.</p>
+  </section>
+
+  <section id="instalaciones">
+    <h2 style="color: #b01e51;">Instalaciones</h2>
+    <div style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
+        <img src="images/interno1.jpg" style="width: 250px; height: 180px; object-fit: cover; border-radius: 4px;">
+        <img src="images/interno2.jpg" style="width: 250px; height: 180px; object-fit: cover; border-radius: 4px;">
+        <img src="images/local1.jpg" style="width: 250px; height: 180px; object-fit: cover; border-radius: 4px;">
+    </div>
+  </section>
+
+  <section id="redes">
+    <h2 style="color: #b01e51;">Redes Sociales</h2>
+    <div style="display: flex; flex-direction: column; gap: 10px; max-width: 300px; margin: 0 auto;">
+        <a href="https://wa.me/593989266227" target="_blank" style="background:#25d366; color:white; padding:12px; text-decoration:none; border-radius:5px; text-align:center;">WhatsApp</a>
+        <a href="https://www.facebook.com/share/1ASGabaQ2s/" target="_blank" style="background:#3b5998; color:white; padding:12px; text-decoration:none; border-radius:5px; text-align:center;">Facebook</a>
+    </div>
   </section>
 
   <script src="script.js"></script>
