@@ -3,15 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Odonto Plus +</title>
+  <title>Odonto Plus + | Depósito Dental</title>
+  
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
 
   <header>
-    <img src="images/logo1.png" alt="Odonto Plus + Logo">
+    <img src="images/logo1.png" alt="Odonto Plus + Logo" class="logo-img">
     <h1 style="display: none;">Odonto Plus + Depósito Dental</h1>
+    
     <nav>
       <a href="#inicio">Inicio</a>
       <a href="#nosotros">Nosotros</a>
@@ -23,64 +25,70 @@
 
   <section id="inicio" class="seccion-activa">
     <h2>Bienvenidos a Odonto Plus +</h2>
-    <p>Excelencia clínica entregada. Tu socio estratégico en suministros dentales de calidad.</p>
+    <p style="font-size: 1.2em; text-align: center;">Excelencia clínica entregada. Tu socio estratégico en suministros dentales de calidad.</p>
   </section>
 
   <section id="nosotros">
     <h2>Sobre Nosotros</h2>
-    <p><strong>Detrás de la Marca: La Visión de Odonto Plus +</strong></p>
-    <p>En el núcleo de Depósito Dental Odonto Plus + no solo encontrará un inventario; hallará una visión clara: la Odontología profesional merece un proveedor que opere sin fallos.</p>
-    <p>Hemos diseñado cada aspecto de nuestra operación para ser el aliado estratégico que su clínica necesita.</p>
+    <div class="contenido-texto">
+        <p><strong>Detrás de la Marca: La Visión de Odonto Plus +</strong></p>
+        <p>En el núcleo de Depósito Dental Odonto Plus + no solo encontrará un inventario; hallará una visión clara: la Odontología profesional merece un proveedor que opere sin fallos.</p>
+        <p>Hemos diseñado cada aspecto de nuestra operación para ser el aliado estratégico que su clínica necesita, garantizando calidad y confianza en cada producto.</p>
+    </div>
   </section>
 
   <section id="productos">
     <h2>Catálogo de Productos</h2>
-    <div class="catalogo">
+    <div class="catalogo-container">
       <img id="catalogoImagen" src="images/Catalogoodontoplus_page-0001.jpg" alt="Catálogo Odonto Plus +" loading="lazy">
+      
       <div class="controls">
-        <button onclick="anteriorPagina()">Anterior</button>
-        <input type="number" id="paginaInput" min="1" max="72" value="1">
-        <button onclick="irAPagina()">Ir</button>
-        <button onclick="siguientePagina()">Siguiente</button>
+        <button onclick="anteriorPagina()"><i class="fas fa-chevron-left"></i> Anterior</button>
+        <div class="input-group">
+            <input type="number" id="paginaInput" min="1" max="72" value="1">
+            <button onclick="irAPagina()">Ir</button>
+        </div>
+        <button onclick="siguientePagina()">Siguiente <i class="fas fa-chevron-right"></i></button>
       </div>
-      <p>Página <span id="paginaActual">1</span> de 72</p>
+      <p class="contador-paginas">Página <span id="paginaActual">1</span> de 72</p>
     </div>
   </section>
 
   <section id="instalaciones">
     <h2>Nuestras Instalaciones</h2>
-    <div class="galeria">
-        <img src="images/interno1.jpg" alt="Instalación 1" loading="lazy">
-        <img src="images/interno2.jpg" alt="Instalación 2" loading="lazy">
-        <img src="images/local1.jpg" alt="Vista exterior del local" loading="lazy">
+    <div class="galeria-grid">
+        <div class="foto-marco"><img src="images/interno1.jpg" alt="Instalación 1"></div>
+        <div class="foto-marco"><img src="images/interno2.jpg" alt="Instalación 2"></div>
+        <div class="foto-marco"><img src="images/local1.jpg" alt="Vista exterior"></div>
     </div>
   </section>
 
   <section id="redes">
-    <h2>Dirección</h2>
-    <div class="map-container">
-        <a href="https://maps.google.com" target="_blank" class="map-icon">
+    <h2>Contacto y Ubicación</h2>
+    
+    <div class="tarjeta-mapa">
+        <a href="https://maps.google.com" target="_blank" class="icono-mapa">
             <i class="fas fa-map-marker-alt"></i>
         </a>
-        <div>
-            <p><strong>Ubícanos entre:</strong></p>
-            <p>Eplicachima y Mariano Samaniego, Barrio El Pedestal, Loja - Ecuador</p>
-            <a href="https://maps.google.com" target="_blank" class="map-link">Ver en Google Maps</a>
+        <div class="info-mapa">
+            <p><strong>Ubícanos en Loja:</strong></p>
+            <p>Eplicachima y Mariano Samaniego, Barrio El Pedestal, Loja - Ecuador.</p>
+            <a href="https://maps.google.com" target="_blank" class="link-google">Ver en Google Maps</a>
         </div>
     </div>
     
-    <p><strong>Síguenos en nuestras Redes Sociales:</strong></p>
-    <div class="redes-container">
-        <a href="https://www.facebook.com/share/1ASGabaQ2s/" target="_blank" class="social-box facebook">
+    <p style="margin-top: 20px; font-weight: bold;">Síguenos en nuestras Redes Sociales:</p>
+    <div class="redes-lista">
+        <a href="https://www.facebook.com/share/1ASGabaQ2s/" target="_blank" class="btn-social facebook">
             <i class="fab fa-facebook-f"></i> Facebook
         </a>
-        <a href="https://www.instagram.com/odontoplus24" target="_blank" class="social-box instagram">
+        <a href="https://www.instagram.com/odontoplus24" target="_blank" class="btn-social instagram">
             <i class="fab fa-instagram"></i> Instagram
         </a>
-        <a href="https://www.tiktok.com/@odontoplus24" target="_blank" class="social-box tiktok">
+        <a href="https://www.tiktok.com/@odontoplus24" target="_blank" class="btn-social tiktok">
             <i class="fab fa-tiktok"></i> TikTok
         </a>
-        <a href="https://wa.me/593989266227" target="_blank" class="social-box whatsapp">
+        <a href="https://wa.me/593989266227" target="_blank" class="btn-social whatsapp">
             <i class="fab fa-whatsapp"></i> WhatsApp
         </a>
     </div>
@@ -93,6 +101,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
-
-
