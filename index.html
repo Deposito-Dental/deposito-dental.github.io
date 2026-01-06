@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Odonto Plus +</title>
+  <title>Odonto Plus + | Depósito Dental</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
@@ -11,64 +11,72 @@
 
   <header>
     <img src="images/logo1.png" alt="Odonto Plus Logo" class="logo-img">
-    <h1 class="texto-a-borrar">Odonto Plus + Depósito Dental</h1>
-
     <nav>
       <a href="#inicio" class="nav-link activo">Inicio</a>
       <a href="#nosotros" class="nav-link">Nosotros</a>
       <a href="#productos" class="nav-link">Productos</a>
       <a href="#instalaciones" class="nav-link">Instalaciones</a>
-      <a href="#redes" class="nav-link">Redes Sociales</a>
+      <a href="#redes" class="nav-link">Contacto</a>
     </nav>
   </header>
 
   <section id="inicio" class="seccion-activa">
-    <h2 class="titulo-seccion">Bienvenidos</h2>
-    <p>Excelencia clínica entregada. Tu socio estratégico en suministros dentales de calidad en Loja, Ecuador.</p>
-    <div class="banner-inicio">
-        <img src="images/local1.jpg" alt="Local Odonto Plus">
+    <h2 class="titulo-seccion">Bienvenidos a Odonto Plus +</h2>
+    <div class="texto-inicio">
+        <p><strong>Excelencia clínica entregada.</strong> Somos su socio estratégico en suministros dentales de alta calidad en la ciudad de Loja, Ecuador. Nos especializamos en brindar soluciones integrales para profesionales de la odontología.</p>
+        <p>En Odonto Plus +, entendemos que la precisión y la calidad de los materiales son fundamentales para el éxito de sus tratamientos. Por ello, seleccionamos cuidadosamente cada producto de nuestro catálogo, asegurando que cumplan con los más altos estándares internacionales.</p>
+        <p>Nuestro compromiso va más allá de la venta; buscamos fortalecer la práctica odontológica local mediante un servicio personalizado, entrega puntual y asesoramiento técnico continuo. Confíe en nosotros para elevar el nivel de su clínica o consultorio.</p>
     </div>
   </section>
 
   <section id="nosotros">
-    <h2 class="titulo-seccion">Sobre Nosotros</h2>
-    <p>En Odonto Plus + hallará una visión clara: la Odontología profesional merece un proveedor que opere sin fallos.</p>
+    <h2 class="titulo-seccion">Nuestra Visión</h2>
+    <p>En el núcleo de Depósito Dental Odonto Plus + hallará una visión clara: la Odontología profesional merece un proveedor que opere sin fallos, con ética y compromiso total hacia el bienestar del paciente final a través de sus doctores.</p>
   </section>
 
   <section id="productos">
     <h2 class="titulo-seccion">Catálogo de Productos</h2>
-    <div class="catalogo-container">
+    <div class="catalogo-wrapper">
       <div class="visor-catalogo">
         <img id="catalogoImagen" src="images/Catalogoodontoplus_page-0001.jpg" alt="Página del catálogo">
       </div>
-      
       <div class="controles-catalogo">
-        <button onclick="anteriorPagina()" class="btn-flecha"><i class="fas fa-chevron-left"></i></button>
-        <div class="input-pagina">
-            <input type="number" id="paginaInput" min="1" max="72" value="1">
-            <button onclick="irAPagina()" class="btn-ir">Ir</button>
+        <button onclick="anteriorPagina()" class="btn-ctrl"><i class="fas fa-arrow-left"></i></button>
+        <div class="paginacion-info">
+            <input type="number" id="paginaInput" min="1" max="72" value="1" onchange="irAPagina()">
+            <span>de 72</span>
         </div>
-        <button onclick="siguientePagina()" class="btn-flecha"><i class="fas fa-chevron-right"></i></button>
+        <button onclick="siguientePagina()" class="btn-ctrl"><i class="fas fa-arrow-right"></i></button>
       </div>
-      <p class="contador">Página <span id="paginaActual">1</span> de 72</p>
     </div>
   </section>
 
   <section id="instalaciones">
     <h2 class="titulo-seccion">Nuestras Instalaciones</h2>
     <div class="galeria-grid">
-        <img src="images/interno1.jpg" alt="Instalación 1">
-        <img src="images/interno2.jpg" alt="Instalación 2">
-        <img src="images/local1.jpg" alt="Vista exterior">
+        <img src="images/interno1.jpg" alt="Área de Ventas">
+        <img src="images/interno2.jpg" alt="Bodega">
+        <img src="images/local1.jpg" alt="Fachada Principal">
     </div>
   </section>
 
   <section id="redes">
-    <h2 class="titulo-seccion">Redes Sociales</h2>
-    <div class="botones-redes">
-        <a href="https://wa.me/593989266227" target="_blank" class="rs-link wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-        <a href="https://www.facebook.com/share/1ASGabaQ2s/" target="_blank" class="rs-link fb"><i class="fab fa-facebook-f"></i> Facebook</a>
-        <a href="https://www.instagram.com/odontoplus24" target="_blank" class="rs-link ig"><i class="fab fa-instagram"></i> Instagram</a>
+    <h2 class="titulo-seccion">Encuéntranos</h2>
+    <div class="contacto-container">
+        <div class="mapa-box">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3980.123456789!2d-79.204230!3d-3.993130!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91cb480000000000%3A0x0!2zM8KwNTknMzUuMyJTIDc5wrAxMicyNy40Ilc!5e0!3m2!1ses!2sec!4v1715456789012!5m2!1ses!2sec" width="100%" height="250" style="border:0; border-radius: 8px;" allowfullscreen="" loading="lazy"></iframe>
+            <p><i class="fas fa-map-marker-alt"></i> Loja, Ecuador</p>
+        </div>
+
+        <div class="redes-box">
+            <h3>Nuestras Redes</h3>
+            <div class="redes-list">
+                <a href="https://wa.me/593989266227" target="_blank" class="rs wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                <a href="https://www.facebook.com/share/1ASGabaQ2s/" target="_blank" class="rs fb"><i class="fab fa-facebook-f"></i> Facebook</a>
+                <a href="https://www.instagram.com/odontoplus24" target="_blank" class="rs ig"><i class="fab fa-instagram"></i> Instagram</a>
+                <a href="mailto:contacto@odontoplus.com" class="rs mail"><i class="fas fa-envelope"></i> Correo</a>
+            </div>
+        </div>
     </div>
   </section>
 
