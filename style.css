@@ -9,11 +9,11 @@ body {
     font-family: 'Roboto', Arial, sans-serif;
     background: #f8f9fa;
     color: #333;
-    font-size: 19px; /* Texto más grande para lectura cómoda */
-    line-height: 1.8; /* Espacio entre líneas para evitar fatiga */
+    font-size: 19px; 
+    line-height: 1.8; 
 }
 
-/* 2. HEADER Y LOGOTIPO (MODIFICACIÓN ESPECÍFICA) */
+/* 2. HEADER Y LOGOTIPO (INTENTO DE BLANQUEO MÁXIMO) */
 header {
     background-color: #005f99 !important;
     text-align: center;
@@ -26,14 +26,12 @@ header img {
     height: auto !important;
     display: inline-block;
     
-    /* ESTO CONVIERTE LAS LETRAS CELESTES EN BLANCAS */
-    /* Subimos el brillo al máximo para que el celeste pase a blanco */
-    /* y ajustamos el contraste para que el dibujo del diente no pierda su forma */
-    filter: brightness(2.5) contrast(1.2);
+    /* TRUCO TÉCNICO: Forzamos el blanqueo del canal celeste */
+    /* Saturamos el brillo para que el celeste se pierda en blanco */
+    filter: brightness(3) contrast(1.1) saturate(0);
     
-    /* Agregamos una sombra blanca muy fina para asegurar que las letras 
-       se vean nítidas y sólidas sobre el fondo azul */
-    filter: drop-shadow(0px 0px 1px rgba(255, 255, 255, 1));
+    /* Agregamos una sombra proyectada blanca para que el texto sea nítido */
+    filter: drop-shadow(0px 0px 1px #ffffff) drop-shadow(0px 0px 1px #ffffff);
     
     margin-bottom: 15px;
 }
@@ -50,7 +48,7 @@ nav a {
     font-size: 18px;
 }
 
-/* 3. SECCIONES Y TEXTOS (MÁS ESPACIO Y MEJOR VISIBILIDAD) */
+/* 3. SECCIONES Y TEXTOS CON ESPACIO PROFESIONAL */
 section {
     padding: 70px 20px; 
     max-width: 1000px;
@@ -69,13 +67,13 @@ p {
     margin-bottom: 25px; 
 }
 
-/* 4. CATÁLOGO Y CONTROLES GRANDES */
+/* 4. CATÁLOGO EQUILIBRADO Y BOTONES */
 .catalogo {
     text-align: center;
 }
 
 .catalogo img#catalogoImagen {
-    max-width: 750px !important; 
+    max-width: 800px !important; 
     width: 95% !important;
     height: auto !important;
     border-radius: 15px;
@@ -109,10 +107,9 @@ p {
     text-align: center;
     border: 2px solid #005f99;
     border-radius: 10px;
-    font-weight: bold;
 }
 
-/* 5. INSTALACIONES (TAMAÑO REDUCIDO Y ESTÉTICO) */
+/* 5. INSTALACIONES REDUCIDAS */
 #instalaciones {
     text-align: center;
 }
@@ -127,7 +124,7 @@ p {
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-/* 6. REDES SOCIALES (COLORES ORIGINALES) */
+/* 6. REDES SOCIALES */
 .redes-container {
     display: flex;
     justify-content: center;
