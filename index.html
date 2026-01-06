@@ -1,155 +1,30 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Odonto Plus + Depósito Dental</title>
-
-    <link rel="stylesheet" href="style.css?v=202506">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLMDpajRzmtvjC+oG4c+sE+wXhBw0yM+B0t2bM20P4W4+mJ21j8j6a3N7nQp2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-<body>
-  <header>
-    <img src="images/logo1.png" alt="Odonto Plus + Logo">
-    <h1>Odonto Plus + Depósito Dental</h1>
-    <nav>
-      <a href="#inicio">Inicio</a>
-      <a href="#nosotros">Nosotros</a>
-      <a href="#productos">Productos</a>
-      <a href="#instalaciones">Instalaciones</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
-  </header>
-
-  <section id="inicio">
-    <h2>Bienvenidos a Odonto Plus +</h2>
-    <p>Excelencia clínica entregada. Tu socio estratégico en suministros dentales de calidad.</p>
-  </section>
-
-  <section id="nosotros">
-    <h2>Sobre Nosotros</h2>
-    <p><strong>Detrás de la Marca: La Visión de Odonto Plus +</strong></p>
-    <p>En el núcleo de Depósito Dental Odonto Plus + no solo encontrará un inventario; hallará una visión clara: la Odontología profesional merece un proveedor que opere sin fallos.</p>
-    <p>Hemos diseñado cada aspecto de nuestra operación para ser el aliado estratégico que su clínica necesita. Esto significa que cada producto es seleccionado y validado con una rigurosidad implacable, eligiendo solo los materiales y equipos en los que confiaríamos plenamente.</p>
-    <p>Nuestra misión es simple, pero poderosa: liberarle de las preocupaciones del suministro para que pueda enfocarse totalmente en la excelencia clínica.</p>
-  </section>
-
-  <section id="productos">
-    <h2>Catálogo de Productos</h2>
-    <div class="catalogo">
-            <img id="catalogoImagen" src="images/Catalogoodontoplus_page-0001.jpg" alt="Catálogo Odonto Plus +" loading="lazy">
-      <div class="controls">
-        <button onclick="anteriorPagina()">Anterior</button>
-        <input type="number" id="paginaInput" min="1" max="72" value="1">
-        <button onclick="irAPagina()">Ir</button>
-        <button onclick="siguientePagina()">Siguiente</button>
-      </div>
-      <p>Página <span id="paginaActual">1</span> de 72</p>
-    </div>
-  </section>
-
-  <section id="instalaciones">
-    <h2>Nuestras Instalaciones</h2>
-        <img src="images/interno1.jpg" alt="Instalación 1" style="max-width:45%; margin:10px;" loading="lazy">
-    <img src="images/interno2.jpg" alt="Instalación 2" style="max-width:45%; margin:10px;" loading="lazy">
-    <img src="images/local1.jpg" alt="Vista exterior del local" style="max-width:45%; margin:10px;" loading="lazy">
-  </section>
-
-  <section id="contacto">
-    <h2>Contacto</h2>
-    <p><strong>Dirección:</strong> Eplicachima y Mariano Samaniego, Barrio El Pedestal, Loja - Ecuador, Código Postal 110103</p>
-    <p><strong>Teléfono / WhatsApp:</strong> <a href="https://wa.me/593989266227" target="_blank">+593 989266227</a></p>
-    <p><strong>Redes Sociales:</strong></p>
-        <div class="redes-container">
-            <a href="https://www.facebook.com/share/1ASGabaQ2s/" target="_blank" id="facebook-box" class="social-box">
-                <i class="fab fa-facebook-f"></i> Facebook
-            </a>
-            <span class="separator">|</span>
-            <a href="https://www.instagram.com/odontoplus24" target="_blank" id="instagram-box" class="social-box">
-                <i class="fab fa-instagram"></i> Instagram
-            </a>
-            <span class="separator">|</span>
-            <a href="https://www.tiktok.com/@odontoplus24" target="_blank" id="tiktok-box" class="social-box">
-                <i class="fab fa-tiktok"></i> TikTok
-            </a>
-            <span class="separator">|</span>
-            <a href="https://wa.me/593989266227" target="_blank" id="whatsapp-box" class="social-box">
-                <i class="fab fa-whatsapp"></i> WhatsApp
+<section id="redes">
+    <h2>Dirección</h2>
+    <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 20px;">
+        <a href="https://www.google.com/maps/search/?api=1&query=2Q3R+P5,Loja" target="_blank" style="color: #d32f2f; font-size: 24px; text-decoration: none;">
+            <i class="fas fa-map-marker-alt"></i>
+        </a>
+        <div>
+            <p>Eplicachima y Mariano Samaniego, Barrio El Pedestal, Loja - Ecuador, Código Postal 110103</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=2Q3R+P5,Loja" target="_blank" style="color: #005f99; font-size: 0.9em; font-weight: bold;">
+                Ver en Google Maps
             </a>
         </div>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Odonto Plus + Depósito Dental | Excelencia Clínica. Todos los derechos reservados.</p>
-  </footer>
-
-  <script>
-    let paginaActual = 1;
-    const totalPaginas = 72;
-    // Función para precargar la siguiente imagen
-    let imagenSiguiente = new Image();
-
-    function obtenerRuta(numeroPagina) {
-        return `images/Catalogoodontoplus_page-${String(numeroPagina).padStart(4,'0')}.jpg`;
-    }
-
-    function precargarSiguientePagina() {
-        const proximaPagina = paginaActual + 1;
-        if (proximaPagina <= totalPaginas) {
-            imagenSiguiente.src = obtenerRuta(proximaPagina);
-        }
-    }
+    </div>
     
-    // Inicia la precarga de la página 2 inmediatamente al cargar la página 1
-    precargarSiguientePagina();
-
-
-    function actualizarImagen() {
-        document.getElementById("catalogoImagen").src = obtenerRuta(paginaActual);
-        document.getElementById("paginaActual").textContent = paginaActual;
-        document.getElementById("paginaInput").value = paginaActual;
-        precargarSiguientePagina();
-    }
-
-    function siguientePagina() {
-      if (paginaActual < totalPaginas) {
-        paginaActual++;
-        // Usa la imagen precargada para fluidez
-        document.getElementById("catalogoImagen").src = imagenSiguiente.src;
-        document.getElementById("paginaActual").textContent = paginaActual;
-        document.getElementById("paginaInput").value = paginaActual;
-        precargarSiguientePagina();
-      }
-    }
-
-    function anteriorPagina() {
-      if (paginaActual > 1) {
-        paginaActual--;
-        actualizarImagen();
-      }
-    }
-
-    function irAPagina() {
-      const pagina = parseInt(document.getElementById("paginaInput").value);
-      if (pagina >= 1 && pagina <= totalPaginas) {
-        paginaActual = pagina;
-        actualizarImagen();
-      } else {
-        alert("Por favor ingrese un número de página válido entre 1 y 72");
-      }
-    }
-  </script>
-</body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
+    <p><strong>Redes Sociales:</strong></p>
+    <div class="redes-container">
+        <a href="https://www.facebook.com/share/1ASGabaQ2s/" target="_blank" id="facebook-box" class="social-box">
+            <i class="fab fa-facebook-f"></i> Facebook
+        </a>
+        <a href="https://www.instagram.com/odontoplus24" target="_blank" id="instagram-box" class="social-box">
+            <i class="fab fa-instagram"></i> Instagram
+        </a>
+        <a href="https://www.tiktok.com/@odontoplus24" target="_blank" id="tiktok-box" class="social-box">
+            <i class="fab fa-tiktok"></i> TikTok
+        </a>
+        <a href="https://wa.me/593989266227" target="_blank" id="whatsapp-box" class="social-box">
+            <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+    </div>
+</section>
