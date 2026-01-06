@@ -1,4 +1,4 @@
-/* 1. RESET GENERAL */
+/* 1. RESET Y CONFIGURACIÓN BASE */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -9,37 +9,35 @@ body {
   font-family: 'Roboto', Arial, sans-serif;
   background: #f8f9fa;
   color: #333;
-  font-size: 17px; 
+  line-height: 1.6;
+  font-size: 17px; /* Tamaño de letra normal */
 }
 
-/* 2. HEADER: MARGENES MINIMOS Y LOGO CON LETRAS CELESTES */
+/* 2. HEADER: MÁRGENES MÍNIMOS Y LOGO ORIGINAL */
 header {
   background-color: #005f99 !important;
   text-align: center;
-  padding: 5px 0px !important; /* Márgenes superior e inferior reducidos */
+  padding: 5px 20px !important; /* Recuadro azul más delgado */
 }
 
 header img {
-  width: 750px !important; /* Tamaño gigante solicitado */
-  height: auto !important;
+  width: 750px !important; 
+  max-width: 95% !important;
+  height: auto !important; /* Mantiene proporción del dibujo */
   max-height: none !important;
   display: inline-block;
-  
-  /* EFECTO: Resalta el blanco del diente y aclara las letras hacia el celeste */
-  /* Usamos un brillo alto y un resplandor que no ensucia el dibujo original */
-  filter: brightness(1.2) contrast(1.1) drop-shadow(0px 0px 10px rgba(0, 255, 255, 0.4)) !important;
-  
-  margin: 0 auto !important;
+  /* Resplandor blanco para que las letras se lean sin alterar el dibujo del diente */
+  filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.5)) !important;
+  margin-bottom: 5px;
 }
 
-/* Ocultamos las letras de texto plano para que solo se vea tu logo real */
-header h1, header p {
-  display: none !important;
+header h1 {
+  display: none !important; /* Oculta texto repetido */
 }
 
 nav {
   margin-top: 5px;
-  padding-bottom: 5px;
+  padding-bottom: 10px;
 }
 
 nav a {
@@ -50,49 +48,70 @@ nav a {
   font-size: 16px;
 }
 
-/* 3. CATALOGO: SIN DISTORSIÓN (TAMAÑO ORIGINAL) */
+/* 3. CATÁLOGO: TAMAÑO ORIGINAL SIN DISTORSIÓN */
 .catalogo img {
   max-width: 600px !important;
   width: 90% !important;
-  height: auto !important; /* Evita que la imagen se estire */
+  height: auto !important; /* CORRECCIÓN: Evita que se vea estirada */
   border-radius: 8px;
   box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  display: block;
+  margin: 20px auto;
 }
 
-/* 4. REDES SOCIALES: COLORES ORIGINALES Y VIVOS */
+/* 4. REDES SOCIALES: COLORES ORIGINALES E INTENSOS */
 .redes-container {
     display: flex;
     justify-content: center;
     gap: 15px;
-    margin-top: 20px;
+    margin-top: 25px;
+    flex-wrap: wrap;
 }
 
 .social-box {
-    display: inline-block;
-    padding: 12px 20px;
+    display: inline-block !important;
+    padding: 12px 22px !important;
+    margin: 5px 10px !important;
     color: white !important;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 8px;
+    font-weight: bold !important;
+    text-decoration: none !important;
+    border-radius: 8px !important;
     min-width: 150px;
     text-align: center;
-    opacity: 1 !important; /* Colores sólidos, no transparentes */
-    transition: transform 0.2s;
+    /* ELIMINA LO DESCOLORIDO */
+    opacity: 1 !important; 
+    visibility: visible !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3) !important;
+    transition: transform 0.2s ease;
 }
 
-/* Colores de marca exactos */
-#facebook-box { background-color: #1877F2 !important; }
-#instagram-box { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #ffc000 45%, #e1306c 60%, #833ab4 90%) !important; }
-#tiktok-box { background-color: #000000 !important; }
-#whatsapp-box { background-color: #25D366 !important; }
+/* Colores de Marca Exactos */
+#facebook-box { 
+    background-color: #1877F2 !important; 
+}
+
+/* Instagram: Degradado Oficial Intenso */
+#instagram-box { 
+    background: #d6249f !important;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%) !important;
+}
+
+#tiktok-box { 
+    background-color: #000000 !important; 
+}
+
+#whatsapp-box { 
+    background-color: #25D366 !important; 
+}
 
 .social-box:hover {
     transform: scale(1.05);
+    filter: brightness(1.1);
 }
 
 /* 5. SECCIONES */
 section {
-  padding: 20px 20px;
+  padding: 30px 20px;
   max-width: 1100px;
   margin: auto;
 }
