@@ -23,7 +23,7 @@
 
   <section id="inicio" class="seccion-activa">
     <h2 class="titulo-seccion">Bienvenidos a Odonto Plus +</h2>
-    <p class="parrafo-destacado">Excelencia clínica entregada. Tu socio estratégico en suministros dentales de calidad.</p>
+    <p class="parrafo-inicio">Excelencia clínica entregada. Tu socio estratégico en suministros dentales de calidad.</p>
   </section>
 
   <section id="nosotros">
@@ -37,16 +37,14 @@
   <section id="productos">
     <h2 class="titulo-seccion">Catálogo de Productos</h2>
     <div class="catalogo-wrapper">
-      <div class="visor-catalogo">
-        <img id="catalogoImagen" src="images/Catalogoodontoplus_page-0001.jpg" alt="Catálogo">
-      </div>
+      <img id="catalogoImagen" src="images/Catalogoodontoplus_page-0001.jpg" alt="Catálogo">
       <div class="controles-catalogo">
-        <button onclick="anteriorPagina()" class="btn-ctrl"><i class="fas fa-arrow-left"></i></button>
-        <div class="paginacion-info">
+        <button onclick="anteriorPagina()" class="btn-flecha"><i class="fas fa-chevron-left"></i></button>
+        <div class="paginacion">
             <input type="number" id="paginaInput" min="1" max="72" value="1" onchange="irAPagina()">
             <span>de 72</span>
         </div>
-        <button onclick="siguientePagina()" class="btn-ctrl"><i class="fas fa-arrow-right"></i></button>
+        <button onclick="siguientePagina()" class="btn-flecha"><i class="fas fa-chevron-right"></i></button>
       </div>
     </div>
   </section>
@@ -54,31 +52,39 @@
   <section id="instalaciones">
     <h2 class="titulo-seccion">Nuestras Instalaciones</h2>
     <div class="galeria-grid">
-        <img src="images/interno1.jpg" alt="Instalación 1">
-        <img src="images/interno2.jpg" alt="Instalación 2">
-        <img src="images/local1.jpg" alt="Fachada">
+        <img src="images/interno1.jpg">
+        <img src="images/interno2.jpg">
+        <img src="images/local1.jpg">
     </div>
   </section>
 
   <section id="direccion">
-    <h2 class="titulo-seccion">Dirección</h2>
-    <div class="contacto-info">
-        <p><strong>Ubícanos en:</strong></p>
+    <h2 class="titulo-seccion">Ubicación</h2>
+    <div class="direccion-bloque">
+        <p><strong>Ubícanos entre:</strong></p>
         <p>Eplicachima y Mariano Samaniego, Barrio El Pedestal, Loja - Ecuador, Código Postal 110103</p>
-        <div class="mapa-contenedor">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3980.123456789!2d-79.2045!3d-3.9931!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zM8KwNTknMzUuMiJTIDc5wrAxMicyNi4yIlc!5e0!3m2!1ses!2sec!4v1700000000000" width="100%" height="300" style="border:0; border-radius:10px;" allowfullscreen="" loading="lazy"></iframe>
+        <div class="mapa-marco">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3979.1340417957796!2d-79.2081943!3d-4.0049722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNMKwMDAnMTcuOSJTIDc5wrAxMicyOS41Ilc!5e0!3m2!1ses-419!2sec!4v1715800000000!5m2!1ses-419!2sec" width="100%" height="300" style="border:0; border-radius:10px;" allowfullscreen="" loading="lazy"></iframe>
         </div>
-        <a href="https://maps.google.com/?q=-3.9931,-79.2045" target="_blank" class="btn-maps">Ver en Google Maps</a>
+        <a href="https://maps.app.goo.gl/YourActualGoogleMapsLink" target="_blank" class="btn-google">Ver en Google Maps</a>
     </div>
   </section>
 
   <section id="redes">
-    <h2 class="titulo-seccion">Síguenos en nuestras Redes Sociales</h2>
-    <div class="redes-grid">
-        <a href="https://wa.me/593989266227" target="_blank" class="rs wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-        <a href="https://www.facebook.com/share/1ASGabaQ2s/" target="_blank" class="rs fb"><i class="fab fa-facebook-f"></i> Facebook</a>
-        <a href="https://www.instagram.com/odontoplus24" target="_blank" class="rs ig"><i class="fab fa-instagram"></i> Instagram</a>
-        <a href="https://www.tiktok.com/@odontoplus24" target="_blank" class="rs tk"><i class="fab fa-tiktok"></i> TikTok</a>
+    <h2 class="titulo-seccion">Nuestras Redes Sociales</h2>
+    <div class="redes-container">
+        <a href="https://wa.me/593989266227" target="_blank" class="red-box wa">
+            <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+        <a href="https://www.facebook.com/share/1ASGabaQ2s/" target="_blank" class="red-box fb">
+            <i class="fab fa-facebook-f"></i> Facebook
+        </a>
+        <a href="https://www.instagram.com/odontoplus24" target="_blank" class="red-box ig">
+            <i class="fab fa-instagram"></i> Instagram
+        </a>
+        <a href="https://www.tiktok.com/@odontoplus24" target="_blank" class="red-box tk">
+            <i class="fab fa-tiktok"></i> TikTok
+        </a>
     </div>
   </section>
 
