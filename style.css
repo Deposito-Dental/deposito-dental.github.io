@@ -1,4 +1,4 @@
-/* 1. RESET Y BASE */
+/* 1. RESET GENERAL */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -9,40 +9,37 @@ body {
   font-family: 'Roboto', Arial, sans-serif;
   background: #f8f9fa;
   color: #333;
-  line-height: 1.6;
   font-size: 17px; 
 }
 
-/* 2. HEADER: MARGENES MINIMOS Y LOGO CELESTE */
+/* 2. HEADER: MARGENES MINIMOS Y LOGO CON LETRAS CELESTES */
 header {
   background-color: #005f99 !important;
   text-align: center;
-  /* REDUCCIÓN CRÍTICA DE MÁRGENES */
-  padding: 5px 0px !important; 
+  padding: 5px 0px !important; /* Márgenes superior e inferior reducidos */
 }
 
 header img {
-  /* TAMAÑO GRANDE */
-  width: 750px !important; 
-  /* ELIMINAMOS EL ERROR ANTERIOR DE 80PX */
-  max-height: none !important; 
+  width: 750px !important; /* Tamaño gigante solicitado */
   height: auto !important;
+  max-height: none !important;
   display: inline-block;
   
-  /* COLOR: Letras celestes y diente blanco brillante */
-  filter: hue-rotate(160deg) brightness(1.6) drop-shadow(0px 0px 12px rgba(255, 255, 255, 0.8)) !important;
+  /* EFECTO: Resalta el blanco del diente y aclara las letras hacia el celeste */
+  /* Usamos un brillo alto y un resplandor que no ensucia el dibujo original */
+  filter: brightness(1.2) contrast(1.1) drop-shadow(0px 0px 10px rgba(0, 255, 255, 0.4)) !important;
   
   margin: 0 auto !important;
 }
 
-/* OCULTAR TEXTO REPETIDO */
+/* Ocultamos las letras de texto plano para que solo se vea tu logo real */
 header h1, header p {
   display: none !important;
 }
 
 nav {
-  margin-top: 5px !important;
-  padding-bottom: 5px !important;
+  margin-top: 5px;
+  padding-bottom: 5px;
 }
 
 nav a {
@@ -53,38 +50,49 @@ nav a {
   font-size: 16px;
 }
 
-/* 3. CATÁLOGO: SIN DISTORSIÓN */
+/* 3. CATALOGO: SIN DISTORSIÓN (TAMAÑO ORIGINAL) */
 .catalogo img {
   max-width: 600px !important;
   width: 90% !important;
-  /* MANTIENE TAMAÑO ORIGINAL SIN ESTIRAR */
-  height: auto !important; 
+  height: auto !important; /* Evita que la imagen se estire */
   border-radius: 8px;
   box-shadow: 0 6px 20px rgba(0,0,0,0.1);
 }
 
-/* 4. REDES SOCIALES: COLORES OFICIALES VIVOS */
-.social-box {
-    display: inline-block;
-    padding: 12px 18px; 
-    margin: 5px 10px; 
-    color: white !important;
-    font-weight: bold;
-    text-decoration: none; 
-    border-radius: 6px; 
-    min-width: 140px; 
-    opacity: 1 !important; /* Colores sólidos */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2); 
+/* 4. REDES SOCIALES: COLORES ORIGINALES Y VIVOS */
+.redes-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
 }
 
-#facebook-box { background-color: #1877f2 !important; }
+.social-box {
+    display: inline-block;
+    padding: 12px 20px;
+    color: white !important;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    min-width: 150px;
+    text-align: center;
+    opacity: 1 !important; /* Colores sólidos, no transparentes */
+    transition: transform 0.2s;
+}
+
+/* Colores de marca exactos */
+#facebook-box { background-color: #1877F2 !important; }
 #instagram-box { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #ffc000 45%, #e1306c 60%, #833ab4 90%) !important; }
 #tiktok-box { background-color: #000000 !important; }
 #whatsapp-box { background-color: #25D366 !important; }
 
-/* 5. SECCIONES GENERALES */
+.social-box:hover {
+    transform: scale(1.05);
+}
+
+/* 5. SECCIONES */
 section {
-  padding: 20px 20px !important;
+  padding: 20px 20px;
   max-width: 1100px;
   margin: auto;
 }
