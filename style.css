@@ -9,11 +9,11 @@ body {
     font-family: 'Roboto', Arial, sans-serif;
     background: #f8f9fa;
     color: #333;
-    font-size: 19px; 
-    line-height: 1.8; 
+    font-size: 19px; /* Texto grande y legible */
+    line-height: 1.8; /* Espaciado para evitar fatiga visual */
 }
 
-/* 2. HEADER Y LOGOTIPO (LETRAS BLANCAS Y DIENTE ORIGINAL) */
+/* 2. HEADER Y LOGOTIPO (LETRAS BLANCAS, DIENTE INTACTO) */
 header {
     background-color: #005f99 !important;
     text-align: center;
@@ -25,11 +25,11 @@ header img {
     max-width: 90%;
     height: auto !important;
     display: inline-block;
-    /* FILTRO ESPECIAL: Convierte el celeste de las letras en BLANCO 
-       manteniendo los colores del diente lo más fieles posible */
-    filter: brightness(2) contrast(1.5);
-    /* Resplandor suave para definir bien las letras blancas */
-    filter: drop-shadow(0px 0px 2px rgba(255, 255, 255, 0.8));
+    /* Ajuste para que las letras celestes se vean blancas */
+    /* El contraste alto limpia el celeste y el brillo las hace resaltar */
+    filter: brightness(1.3) contrast(1.6);
+    /* Sombra suave blanca para dar nitidez solo a las letras */
+    filter: drop-shadow(0px 0px 1px rgba(255, 255, 255, 0.9));
     margin-bottom: 15px;
 }
 
@@ -45,7 +45,7 @@ nav a {
     font-size: 18px;
 }
 
-/* 3. SECCIONES Y TEXTOS (ESPACIADO AMPLIO Y PROFESIONAL) */
+/* 3. SECCIONES Y TEXTOS (ESPACIADO PROFESIONAL) */
 section {
     padding: 70px 20px; 
     max-width: 1000px;
@@ -61,7 +61,7 @@ h2 {
 }
 
 p {
-    margin-bottom: 25px; 
+    margin-bottom: 25px; /* Más espacio entre párrafos */
 }
 
 /* 4. CATÁLOGO EQUILIBRADO Y BOTONES LLAMATIVOS */
@@ -107,7 +107,7 @@ p {
     border-radius: 10px;
 }
 
-/* 5. INSTALACIONES (REDUCIDAS Y ALINEADAS) */
+/* 5. INSTALACIONES (REDUCIDAS Y ESTÉTICAS) */
 #instalaciones {
     text-align: center;
 }
@@ -122,7 +122,7 @@ p {
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-/* 6. REDES SOCIALES (COLORES INTENSOS) */
+/* 6. REDES SOCIALES (COLORES ORIGINALES) */
 .redes-container {
     display: flex;
     justify-content: center;
@@ -156,7 +156,7 @@ footer {
     margin-top: 60px;
 }
 
-/* RESPONSIVE PARA MÓVILES */
+/* RESPONSIVE MÓVIL */
 @media (max-width: 768px) {
     #instalaciones img {
         width: 90% !important;
