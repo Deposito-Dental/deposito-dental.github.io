@@ -3,31 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Odonto Plus +</title>
+  <title>Odonto Plus + | Depósito Dental</title>
+  
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
 
   <header>
-    <img src="images/logo1.png" alt="Logo" class="logo-principal">
+    <img src="images/logo1.png" alt="Odonto Plus Logo" class="logo-img">
+    
+    <h1 class="texto-a-borrar">Odonto Plus + Depósito Dental</h1>
+
     <nav>
-      <a href="#inicio">Inicio</a>
-      <a href="#nosotros">Nosotros</a>
-      <a href="#productos">Productos</a>
-      <a href="#instalaciones">Instalaciones</a>
-      <a href="#redes">Redes Sociales</a>
+      <a href="#inicio" class="nav-link">Inicio</a>
+      <a href="#nosotros" class="nav-link">Nosotros</a>
+      <a href="#productos" class="nav-link">Productos</a>
+      <a href="#instalaciones" class="nav-link">Instalaciones</a>
+      <a href="#redes" class="nav-link">Redes Sociales</a>
     </nav>
   </header>
 
   <section id="inicio" class="seccion-activa">
-    <h2>Bienvenidos</h2>
+    <h2>Bienvenidos a Odonto Plus +</h2>
     <p>Excelencia clínica entregada. Tu socio estratégico en suministros dentales de calidad.</p>
   </section>
 
   <section id="nosotros">
     <h2>Sobre Nosotros</h2>
-    <div class="texto-legible">
+    <div class="texto-bloque">
         <p><strong>Detrás de la Marca: La Visión de Odonto Plus +</strong></p>
         <p>En el núcleo de Depósito Dental Odonto Plus + no solo encontrará un inventario; hallará una visión clara: la Odontología profesional merece un proveedor que opere sin fallos.</p>
         <p>Hemos diseñado cada aspecto de nuestra operación para ser el aliado estratégico que su clínica necesita.</p>
@@ -35,36 +39,42 @@
   </section>
 
   <section id="productos">
-    <h2>Catálogo</h2>
-    <div class="catalogo-container">
-      <img id="catalogoImagen" src="images/Catalogoodontoplus_page-0001.jpg" alt="Catálogo">
+    <h2>Catálogo de Productos</h2>
+    <div class="catalogo-box">
+      <img id="catalogoImagen" src="images/Catalogoodontoplus_page-0001.jpg" alt="Catálogo Odonto Plus +">
+      
       <div class="controles">
-        <button onclick="anteriorPagina()">Anterior</button>
+        <button onclick="anteriorPagina()"><i class="fas fa-chevron-left"></i></button>
         <input type="number" id="paginaInput" min="1" max="72" value="1">
         <button onclick="irAPagina()">Ir</button>
-        <button onclick="siguientePagina()">Siguiente</button>
+        <button onclick="siguientePagina()"><i class="fas fa-chevron-right"></i></button>
       </div>
       <p>Página <span id="paginaActual">1</span> de 72</p>
     </div>
   </section>
 
   <section id="instalaciones">
-    <h2>Instalaciones</h2>
-    <div class="galeria-optimizada">
-        <img src="images/interno1.jpg">
-        <img src="images/interno2.jpg">
-        <img src="images/local1.jpg">
+    <h2>Nuestras Instalaciones</h2>
+    <div class="galeria-grid">
+        <img src="images/interno1.jpg" alt="Instalación 1">
+        <img src="images/interno2.jpg" alt="Instalación 2">
+        <img src="images/local1.jpg" alt="Local Exterior">
     </div>
   </section>
 
   <section id="redes">
-    <h2>Contacto</h2>
+    <h2>Contacto y Redes</h2>
     <div class="redes-botones">
-        <a href="https://www.facebook.com/share/1ASGabaQ2s/" class="btn-rs fb"><i class="fab fa-facebook-f"></i> Facebook</a>
-        <a href="https://www.instagram.com/odontoplus24" class="btn-rs ig"><i class="fab fa-instagram"></i> Instagram</a>
-        <a href="https://wa.me/593989266227" class="btn-rs wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        <a href="https://www.facebook.com/share/1ASGabaQ2s/" target="_blank" class="btn fb"><i class="fab fa-facebook-f"></i> Facebook</a>
+        <a href="https://www.instagram.com/odontoplus24" target="_blank" class="btn ig"><i class="fab fa-instagram"></i> Instagram</a>
+        <a href="https://www.tiktok.com/@odontoplus24" target="_blank" class="btn tk"><i class="fab fa-tiktok"></i> TikTok</a>
+        <a href="https://wa.me/593989266227" target="_blank" class="btn wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
     </div>
   </section>
+
+  <footer>
+    <p>© 2025 Odonto Plus + | Excelencia Clínica Dental</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
