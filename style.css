@@ -1,153 +1,95 @@
-/* 1. CONFIGURACIÓN GENERAL */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
+/* --- CONFIGURACIÓN DE FONDO Y CUERPO --- */
 body {
-    font-family: 'Roboto', Arial, sans-serif;
-    background: #f8f9fa;
+    background-color: #fce4ec; /* Rosado Pastel */
+    background-image: url('images/fondo-dental.jpg'); /* Tu imagen de fondo */
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    margin: 0;
     color: #333;
-    font-size: 19px; 
-    line-height: 1.8; 
 }
 
-/* 2. HEADER CON FONDO ROSADO (PARA RESALTAR EL LOGO) */
+/* --- CABECERA Y LOGO --- */
 header {
-    /* Un rosado suave y profesional que no cansa la vista */
-    background-color: #fce4ec !important; 
+    background-color: #005f99 !important;
+    padding: 20px 0 !important;
     text-align: center;
-    padding: 30px 0px !important;
-    border-bottom: 2px solid #f8bbd0;
+    overflow: hidden; /* Importante para el recorte del logo */
 }
 
 header img {
-    width: 600px !important; 
+    width: 600px !important;
     max-width: 90%;
-    height: auto !important;
+    height: auto;
     display: inline-block;
-    /* Al ser fondo claro, las letras celestes se verán naturales e intactas */
-    filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.1));
-    margin-bottom: 15px;
+    
+    /* RECORTE PARA BORRAR "Odonto Plus + Depósito Dental" DE LA IMAGEN */
+    /* Cortamos el 42% superior para que solo quede el logo principal */
+    clip-path: inset(42% 0 0 0); 
+    margin-top: -80px; /* Ajusta este valor para centrar el logo recortado */
+    
+    /* Filtro para resaltar el blanco */
+    filter: brightness(1.2) contrast(1.1);
 }
 
-/* Ajuste de los enlaces de navegación para que se vean sobre el rosado */
+/* --- NAVEGACIÓN --- */
+nav {
+    margin-top: 10px;
+}
+
 nav a {
-    color: #c2185b !important; /* Un tono cereza oscuro para que resalte */
-    margin: 0 20px;
+    color: white;
     text-decoration: none;
+    margin: 0 15px;
     font-weight: bold;
-    font-size: 18px;
+    transition: color 0.3s;
 }
 
-/* 3. SECCIONES CON ESPACIO AMPLIO */
+nav a:hover {
+    color: #fce4ec;
+}
+
+/* --- SISTEMA DE SECCIONES (SIN SCROLL) --- */
 section {
-    padding: 70px 20px; 
-    max-width: 1000px;
-    margin: auto;
-}
-
-h2 {
-    color: #c2185b; /* Combinando con el estilo rosado/dental */
-    font-size: 34px;
-    margin-bottom: 30px;
-    border-left: 6px solid #f06292;
-    padding-left: 15px;
-}
-
-p {
-    margin-bottom: 25px; 
-}
-
-/* 4. CATÁLOGO Y CONTROLES GRANDES */
-.catalogo {
-    text-align: center;
-}
-
-.catalogo img#catalogoImagen {
-    max-width: 800px !important; 
-    width: 95% !important;
-    height: auto !important;
+    display: none; /* Ocultas por defecto */
+    padding: 40px;
+    max-width: 900px;
+    margin: 20px auto;
+    background: rgba(255, 255, 255, 0.9); /* Fondo blanco traslúcido */
     border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    margin: 0 auto 30px auto;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    animation: fadeIn 0.5s ease;
 }
 
-.controls {
+/* Esta clase la activa el JavaScript */
+.seccion-activa {
+    display: block !important;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- GALERÍA DE INSTALACIONES --- */
+.galeria {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    margin: 40px 0;
-}
-
-.controls button {
-    background-color: #c2185b;
-    color: white !important;
-    border: none;
-    padding: 15px 35px;
-    font-size: 18px;
-    font-weight: bold;
-    border-radius: 10px;
-    cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
-
-.controls input#paginaInput {
-    width: 100px;
-    height: 65px;
-    font-size: 28px;
-    text-align: center;
-    border: 3px solid #f06292;
-    border-radius: 12px;
-    font-weight: bold;
-}
-
-/* 5. INSTALACIONES (REDUCIDAS) */
-#instalaciones {
-    text-align: center;
-}
-
-#instalaciones img {
-    max-width: 280px !important; 
-    width: 30% !important; 
-    height: 200px !important; 
-    object-fit: cover;
-    margin: 10px;
-    border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-/* 6. REDES SOCIALES */
-.redes-container {
-    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 15px;
-    margin-top: 30px;
-    flex-wrap: wrap;
 }
 
-.social-box {
-    padding: 15px 25px !important;
-    color: white !important;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 10px;
-    min-width: 160px;
-    text-align: center;
+.galeria img {
+    max-width: 45%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 
-#facebook-box { background-color: #1877F2 !important; }
-#instagram-box { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%) !important; }
-#tiktok-box { background-color: #000000 !important; }
-#whatsapp-box { background-color: #25D366 !important; }
-
-/* 7. FOOTER */
+/* --- PIE DE PÁGINA --- */
 footer {
-    background-color: #c2185b;
-    color: white;
     text-align: center;
-    padding: 40px;
-    margin-top: 60px;
+    padding: 20px;
+    color: #555;
+    font-size: 0.9em;
 }
