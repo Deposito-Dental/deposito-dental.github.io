@@ -1,17 +1,32 @@
-// Navegación fluida
+// Navegación fluida con transición activada por clase
 document.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener('click', function(e) {
         e.preventDefault();
+        
+        // Remover clases activas
         document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('activo'));
         document.querySelectorAll('section').forEach(s => s.classList.remove('seccion-activa'));
+        
+        // Activar link actual
         this.classList.add('activo');
+        
+        // Obtener la sección y mostrarla con la animación
         const targetId = this.getAttribute('href').substring(1);
-        document.getElementById(targetId).classList.add('seccion-activa');
-        window.scrollTo(0, 0);
+        const targetSection = document.getElementById(targetId);
+        
+        if (targetSection) {
+            targetSection.classList.add('seccion-activa');
+        }
+        
+        // Scroll suave al inicio del contenido
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
     });
 });
 
-// Lógica de Zoom
+// Lógica de Zoom en imagen
 const areaZoom = document.getElementById('areaZoom');
 const imgZoom = document.getElementById('catalogoImagen');
 
@@ -28,7 +43,7 @@ if(areaZoom && imgZoom) {
     });
 }
 
-// Lógica del Catálogo
+// Lógica del Catálogo de Imágenes
 let paginaActual = 1;
 const totalPaginas = 72;
 
