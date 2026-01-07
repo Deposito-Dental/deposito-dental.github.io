@@ -1,108 +1,67 @@
-/* --- CONFIGURACIÓN DE TIPOGRAFÍA Y FONDO --- */
+/* GENERAL */
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Montserrat', sans-serif; /* Letra moderna */
+    font-family: 'Montserrat', sans-serif;
     background-color: #fce4ec; /* Rosado Pastel */
     color: #444;
 }
 
-header { text-align: center; padding: 30px 0; background: white; }
+header { text-align: center; padding: 40px 0; background: white; }
 .logo-img { width: 280px; }
 
-nav { display: flex; justify-content: center; gap: 20px; margin-top: 20px; flex-wrap: wrap; }
+nav { display: flex; justify-content: center; gap: 25px; margin-top: 25px; }
 nav a { text-decoration: none; color: #b01e51; font-weight: 700; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; }
 .nav-link.activo { border-bottom: 3px solid #b01e51; }
 
-/* --- SECCIONES Y TEXTOS ATRACTIVOS --- */
+/* SECCIONES */
 section {
     display: none;
     max-width: 900px;
-    margin: 30px auto;
+    margin: 40px auto;
     background: white;
-    padding: 45px;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(176, 30, 81, 0.1);
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(176, 30, 81, 0.1);
     text-align: center;
 }
-.seccion-activa { display: block !important; animation: slideUp 0.5s ease; }
+.seccion-activa { display: block !important; animation: fadeIn 0.6s ease; }
 
-@keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
-/* Estilo para los títulos */
-.titulo-elegante {
-    font-family: 'Playfair Display', serif; /* Letra estilo revista/clínica */
+/* TEXTOS ATRACTIVOS */
+.titulo-premium {
+    font-family: 'Playfair Display', serif;
     color: #b01e51;
-    font-size: 32px;
-    margin-bottom: 25px;
-    font-style: italic;
+    font-size: 34px;
+    margin-bottom: 30px;
 }
-
-/* Estilo para el párrafo de Inicio */
-.parrafo-premium {
-    font-size: 20px;
+.parrafo-atractivo {
+    font-size: 22px;
     line-height: 1.8;
-    color: #555;
-    font-weight: 400;
+    color: #666;
 }
-.enfasis {
-    color: #b01e51;
-    font-weight: 700;
-    font-size: 24px;
-}
+.destaque { color: #b01e51; font-weight: 700; font-size: 28px; }
+.texto-nosotros p { line-height: 2; font-size: 18px; text-align: justify; margin-bottom: 15px; }
 
-/* --- CATÁLOGO CON TAMAÑO ACEPTABLE (65% del ancho) --- */
-.catalogo-wrapper {
-    max-width: 550px; /* Tamaño aumentado para mejor lectura */
+/* CATÁLOGO (TAMAÑO ACEPTABLE) */
+.catalogo-contenedor {
+    max-width: 580px; /* Tamaño optimizado para lectura */
     margin: 0 auto;
-    background: #f9f9f9;
-    padding: 15px;
-    border-radius: 10px;
-    border: 1px solid #eee;
 }
-#catalogoImagen {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-.controles-catalogo { display: flex; justify-content: center; align-items: center; gap: 20px; margin-top: 20px; }
-.btn-flecha { background: #b01e51; color: white; border: none; width: 45px; height: 45px; border-radius: 50%; cursor: pointer; font-size: 18px; transition: 0.3s; }
-.btn-flecha:hover { background: #ce2a61; transform: scale(1.1); }
-.paginacion input { width: 50px; padding: 8px; text-align: center; font-weight: bold; border: 1px solid #ddd; border-radius: 5px; }
-.total-p { font-weight: bold; color: #b01e51; margin-left: 5px; }
+#catalogoImagen { width: 100%; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.15); }
+.controles { display: flex; justify-content: center; align-items: center; gap: 20px; margin-top: 25px; }
+.btn-circular { background: #b01e51; color: white; border: none; width: 50px; height: 50px; border-radius: 50%; cursor: pointer; transition: 0.3s; }
+.btn-circular:hover { background: #88123a; }
 
-/* --- REDES SOCIALES (COLORES ORIGINALES) --- */
-.redes-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
-    max-width: 500px;
-    margin: 20px auto;
-}
-.red-box {
-    text-decoration: none;
-    color: white;
-    padding: 18px;
-    border-radius: 12px;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    font-size: 17px;
-    transition: 0.3s;
-}
+/* REDES SOCIALES */
+.grid-redes { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; max-width: 500px; margin: 0 auto; }
+.rs-card { text-decoration: none; color: white; padding: 20px; border-radius: 15px; font-weight: bold; display: flex; align-items: center; justify-content: center; gap: 10px; font-size: 18px; transition: 0.3s; }
 .wa { background: #25d366; }
 .fb { background: #1877F2; }
-.tk { background: #000000; }
+.tk { background: #000; }
+/* COLORES ORIGINALES INSTAGRAM */
+.ig { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); }
+.rs-card:hover { transform: scale(1.05); }
 
-/* INSTAGRAM ORIGINAL GRADIENT */
-.ig {
-    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-}
-
-.red-box:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
-
-/* --- DIRECCIÓN Y MAPA --- */
-.btn-google { display: inline-block; background: #b01e51; color: white; text-decoration: none; padding: 12px 25px; border-radius: 30px; font-weight: bold; margin-top: 20px; }
+.galeria-fotos img { width: 100%; border-radius: 15px; margin-bottom: 20px; }
