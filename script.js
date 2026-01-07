@@ -1,32 +1,32 @@
-// Navegación fluida con transición activada por clase
+// 1. NAVEGACIÓN CORREGIDA (Sin saltos feos)
 document.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener('click', function(e) {
         e.preventDefault();
         
-        // Remover clases activas
-        document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('activo'));
-        document.querySelectorAll('section').forEach(s => s.classList.remove('seccion-activa'));
-        
-        // Activar link actual
-        this.classList.add('activo');
-        
-        // Obtener la sección y mostrarla con la animación
         const targetId = this.getAttribute('href').substring(1);
         const targetSection = document.getElementById(targetId);
-        
+
         if (targetSection) {
+            // Quitamos activo de otros
+            document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('activo'));
+            document.querySelectorAll('section').forEach(s => s.classList.remove('seccion-activa'));
+            
+            // Activamos el actual
+            this.classList.add('activo');
             targetSection.classList.add('seccion-activa');
+
+            // En lugar de ir arriba del todo (0,0), vamos al inicio del contenedor
+            // Esto evita que la página "salte" visualmente de forma brusca
+            const headerHeight = document.querySelector('header').offsetHeight;
+            window.scrollTo({
+                top: headerHeight - 20, 
+                behavior: 'smooth'
+            });
         }
-        
-        // Scroll suave al inicio del contenido
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
     });
 });
 
-// Lógica de Zoom en imagen
+// ZOOM DEL CATÁLOGO
 const areaZoom = document.getElementById('areaZoom');
 const imgZoom = document.getElementById('catalogoImagen');
 
@@ -43,7 +43,7 @@ if(areaZoom && imgZoom) {
     });
 }
 
-// Lógica del Catálogo de Imágenes
+// LÓGICA DE PÁGINAS
 let paginaActual = 1;
 const totalPaginas = 72;
 
