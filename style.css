@@ -4,7 +4,7 @@ body {
     padding: 0;
     font-family: 'Lato', sans-serif;
     background-color: #f8bbd0;
-    scroll-behavior: smooth; /* Ayuda a que los movimientos sean fluidos */
+    scroll-behavior: smooth;
 }
 
 header { 
@@ -14,11 +14,25 @@ header {
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
-/* 2. LOGOTIPO AUMENTADO */
+/* --- LOGOTIPO CON ANIMACIÓN DE LATIDO --- */
 .logo-img { 
     width: 380px; 
     height: auto; 
-    transition: transform 0.3s ease;
+    /* Aplicación de la animación: nombre, duración, ritmo y repetición infinita */
+    animation: latidoLogo 3s ease-in-out infinite;
+}
+
+/* Definición de la animación de latido */
+@keyframes latidoLogo {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05); /* Se expande un 5% */
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 nav { display: flex; justify-content: center; gap: 30px; margin-top: 25px; flex-wrap: wrap; }
@@ -34,7 +48,7 @@ nav a {
 
 /* --- CONTENEDOR PRINCIPAL --- */
 main {
-    min-height: 60vh; /* Mantiene un espacio para que la página no "salte" */
+    min-height: 60vh;
 }
 
 section {
@@ -72,14 +86,13 @@ section {
     line-height: 1.8;
 }
 
-/* 3. MAPA Y DIRECCIÓN */
 .mapa-caja {
     width: 100%;
     margin: 25px 0;
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    background: #eee; /* Fondo mientras carga */
+    background: #eee;
 }
 
 /* CATÁLOGO */
