@@ -1,8 +1,8 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #fce4ec; /* Rosado Pastel */
+    font-family: 'Lato', sans-serif;
+    background-color: #fce4ec;
 }
 
 header { text-align: center; padding: 20px; background: white; }
@@ -14,34 +14,69 @@ nav a { text-decoration: none; color: #b01e51; font-weight: bold; }
 
 section {
     display: none;
-    max-width: 800px;
+    max-width: 850px;
     margin: 20px auto;
     background: white;
-    padding: 30px;
-    border-radius: 10px;
+    padding: 40px;
+    border-radius: 12px;
     text-align: center;
 }
 .seccion-activa { display: block !important; }
 
-/* MEJORA 1: TAMAÑO DE CATÁLOGO VISUALMENTE ACEPTABLE */
-.catalogo-ajustado {
-    max-width: 550px; /* Tamaño aumentado para lectura */
-    margin: 0 auto;
+/* 1. CORRECCIÓN PÁRRAFOS: AGRADABLES Y LEGIBLES */
+.parrafo-agradable {
+    font-size: 17px;
+    line-height: 1.6;
+    color: #4a4a4a;
+    margin-bottom: 15px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
 }
+
+/* CATÁLOGO */
+.catalogo-ajustado { max-width: 550px; margin: 0 auto; }
 #catalogoImagen { width: 100%; border-radius: 5px; border: 1px solid #ddd; }
-
-.controles { display: flex; justify-content: center; align-items: center; gap: 10px; margin-top: 10px; }
+.controles { display: flex; justify-content: center; align-items: center; gap: 10px; margin-top: 15px; }
 .btn-flecha { background: #b01e51; color: white; border: none; padding: 10px; border-radius: 50%; cursor: pointer; }
-.pags input { width: 40px; text-align: center; }
+.pags input { width: 45px; text-align: center; }
 
-/* MEJORA 2: INSTAGRAM COLORES ORIGINALES */
-.redes-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; max-width: 400px; margin: 0 auto; }
+/* 2. CORRECCIÓN INSTALACIONES: TAMAÑO UNIFORME Y AGRADABLE */
+.galeria-uniforme {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+.contenedor-foto {
+    width: 100%;
+    height: 200px; /* Altura fija para todas */
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.contenedor-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Hace que la imagen llene el recuadro sin deformarse */
+}
+
+/* REDES SOCIALES */
+.redes-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; max-width: 450px; margin: 0 auto; }
 .caja-red { text-decoration: none; color: white; padding: 15px; border-radius: 8px; font-weight: bold; display: flex; align-items: center; justify-content: center; gap: 8px; }
-
 .wa { background: #25d366; }
 .fb { background: #3b5998; }
 .tk { background: #000; }
 .ig { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); }
 
-.btn-maps { display: inline-block; margin-top: 10px; background: #b01e51; color: white; padding: 10px; text-decoration: none; border-radius: 5px; }
-.galeria img { width: 100%; max-width: 250px; margin: 5px; border-radius: 5px; }
+/* 3. BOTÓN MAPA CORREGIDO */
+.btn-maps { 
+    display: inline-block; 
+    margin-top: 20px; 
+    background: #b01e51; 
+    color: white !important; 
+    padding: 12px 25px; 
+    text-decoration: none; 
+    border-radius: 5px; 
+    font-weight: bold; 
+}
