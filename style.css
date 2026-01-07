@@ -3,8 +3,8 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Lato', sans-serif;
-    /* 2. COLOR ROSADO DEL FONDO AUMENTADO (Agradable y no saturado) */
-    background-color: #f8bbd0; 
+    background-color: #f8bbd0; /* Fondo Rosado Aumentado */
+    overflow-x: hidden;
 }
 
 header { 
@@ -14,12 +14,7 @@ header {
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
-/* 1. LOGOTIPO UN POCO MÁS GRANDE (Aceptable visualmente) */
-.logo-img { 
-    width: 320px; 
-    height: auto;
-    margin-bottom: 10px;
-}
+.logo-img { width: 320px; height: auto; }
 
 nav { display: flex; justify-content: center; gap: 30px; margin-top: 20px; flex-wrap: wrap; }
 nav a { 
@@ -31,6 +26,7 @@ nav a {
 }
 .nav-link.activo { border-bottom: 4px solid #ff007f; }
 
+/* --- SECCIONES Y TRANSICIÓN PROFESIONAL --- */
 section {
     display: none;
     max-width: 900px;
@@ -41,7 +37,23 @@ section {
     text-align: center;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
-.seccion-activa { display: block !important; }
+
+/* Animación de entrada */
+.seccion-activa { 
+    display: block !important; 
+    animation: transitionProfessional 0.6s ease-out; 
+}
+
+@keyframes transitionProfessional {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 .subtitulo-premium {
     color: #ff007f;
@@ -78,21 +90,22 @@ section {
 
 .btn-maps { display: inline-block; margin-top: 25px; background: #ff007f; color: white !important; padding: 16px 32px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 18px; }
 
-/* 3. PIE DE PÁGINA (DERECHOS RESERVADOS) */
+/* --- PIE DE PÁGINA (LETRAS MÁS GRANDES Y AGRADABLES) --- */
 footer {
-    padding: 40px 20px;
+    padding: 60px 20px;
     text-align: center;
 }
 .footer-box {
     display: inline-block;
     background: white;
-    padding: 15px 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    padding: 25px 45px; /* Aumentado */
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 .footer-box p {
     margin: 0;
     color: #b01e51;
     font-weight: 700;
-    font-size: 14px;
+    font-size: 18px; /* Letra más grande y considerable */
+    letter-spacing: 0.5px;
 }
