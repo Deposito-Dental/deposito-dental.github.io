@@ -1,4 +1,4 @@
-// Navegación
+// Navegación fluida
 document.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener('click', function(e) {
         e.preventDefault();
@@ -11,7 +11,7 @@ document.querySelectorAll('.nav-link').forEach(link => {
     });
 });
 
-// LÓGICA DEL ZOOM INTERACTIVO
+// Lógica de Zoom
 const areaZoom = document.getElementById('areaZoom');
 const imgZoom = document.getElementById('catalogoImagen');
 
@@ -19,7 +19,6 @@ areaZoom.addEventListener('mousemove', (e) => {
     const { left, top, width, height } = areaZoom.getBoundingClientRect();
     const x = ((e.pageX - left - window.scrollX) / width) * 100;
     const y = ((e.pageY - top - window.scrollY) / height) * 100;
-    
     imgZoom.style.transformOrigin = `${x}% ${y}%`;
 });
 
@@ -27,7 +26,7 @@ areaZoom.addEventListener('mouseleave', () => {
     imgZoom.style.transformOrigin = 'center center';
 });
 
-// Lógica de cambio de página del Catálogo
+// Lógica del Catálogo (Páginas)
 let paginaActual = 1;
 const totalPaginas = 72;
 
