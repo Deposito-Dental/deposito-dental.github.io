@@ -15,25 +15,30 @@ document.querySelectorAll('.nav-link').forEach(link => {
 const areaZoom = document.getElementById('areaZoom');
 const imgZoom = document.getElementById('catalogoImagen');
 
-areaZoom.addEventListener('mousemove', (e) => {
-    const { left, top, width, height } = areaZoom.getBoundingClientRect();
-    const x = ((e.pageX - left - window.scrollX) / width) * 100;
-    const y = ((e.pageY - top - window.scrollY) / height) * 100;
-    imgZoom.style.transformOrigin = `${x}% ${y}%`;
-});
+if(areaZoom && imgZoom) {
+    areaZoom.addEventListener('mousemove', (e) => {
+        const { left, top, width, height } = areaZoom.getBoundingClientRect();
+        const x = ((e.pageX - left - window.scrollX) / width) * 100;
+        const y = ((e.pageY - top - window.scrollY) / height) * 100;
+        imgZoom.style.transformOrigin = `${x}% ${y}%`;
+    });
 
-areaZoom.addEventListener('mouseleave', () => {
-    imgZoom.style.transformOrigin = 'center center';
-});
+    areaZoom.addEventListener('mouseleave', () => {
+        imgZoom.style.transformOrigin = 'center center';
+    });
+}
 
-// Lógica del Catálogo (Páginas)
+// Lógica del Catálogo
 let paginaActual = 1;
 const totalPaginas = 72;
 
 function actualizarImagen() {
     const num = String(paginaActual).padStart(4, '0');
-    imgZoom.src = `images/Catalogoodontoplus_page-${num}.jpg`;
-    document.getElementById("paginaInput").value = paginaActual;
+    const imagen = document.getElementById("catalogoImagen");
+    if(imagen) {
+        imagen.src = `images/Catalogoodontoplus_page-${num}.jpg`;
+        document.getElementById("paginaInput").value = paginaActual;
+    }
 }
 
 function siguientePagina() { if (paginaActual < totalPaginas) { paginaActual++; actualizarImagen(); } }
