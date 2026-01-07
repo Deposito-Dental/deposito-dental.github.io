@@ -3,66 +3,68 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Lato', sans-serif;
-    background-color: #fce4ec;
+    /* 2. COLOR ROSADO DEL FONDO AUMENTADO (Agradable y no saturado) */
+    background-color: #f8bbd0; 
 }
 
-header { text-align: center; padding: 30px; background: white; }
-.logo-img { width: 280px; }
+header { 
+    text-align: center; 
+    padding: 35px 20px; 
+    background: white; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
 
-/* --- 2. MENÚ MÁS GRANDE Y AGRADABLE --- */
+/* 1. LOGOTIPO UN POCO MÁS GRANDE (Aceptable visualmente) */
+.logo-img { 
+    width: 320px; 
+    height: auto;
+    margin-bottom: 10px;
+}
+
 nav { display: flex; justify-content: center; gap: 30px; margin-top: 20px; flex-wrap: wrap; }
 nav a { 
     text-decoration: none; 
     color: #b01e51; 
     font-weight: 700; 
-    font-size: 18px; /* Tamaño aumentado */
+    font-size: 18px; 
     font-family: 'Montserrat', sans-serif;
-    letter-spacing: 0.5px;
-    transition: color 0.3s;
 }
-nav a:hover { color: #ff007f; }
 .nav-link.activo { border-bottom: 4px solid #ff007f; }
 
 section {
     display: none;
     max-width: 900px;
-    margin: 30px auto;
+    margin: 40px auto;
     background: white;
-    padding: 45px;
-    border-radius: 15px;
+    padding: 50px;
+    border-radius: 20px;
     text-align: center;
-    box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 .seccion-activa { display: block !important; }
 
-/* --- 4. SUBTÍTULOS Y PÁRRAFOS LLAMATIVOS PERO EQUILIBRADOS --- */
 .subtitulo-premium {
-    color: #ff007f; /* Rosa fuerte */
+    color: #ff007f;
     font-family: 'Montserrat', sans-serif;
-    font-size: 32px; /* Tamaño llamativo */
+    font-size: 32px;
     font-weight: 700;
     margin-bottom: 25px;
-    text-transform: capitalize;
 }
 
 .parrafo-estilizado {
-    color: #1a1a1a; /* Negro nítido */
-    font-size: 20px; /* Tamaño agradable para el lector */
+    color: #1a1a1a;
+    font-size: 20px;
     line-height: 1.8;
-    font-weight: 400;
-    max-width: 800px;
-    margin: 0 auto 20px;
 }
 
 /* CATÁLOGO ZOOM */
-.catalogo-contenedor { max-width: 580px; margin: 0 auto; overflow: hidden; }
+.catalogo-contenedor { max-width: 580px; margin: 0 auto; }
 .contenedor-zoom { width: 100%; overflow: hidden; border-radius: 8px; cursor: zoom-in; border: 1px solid #eee; }
 #catalogoImagen { width: 100%; transition: transform 0.2s ease-out; display: block; }
 .contenedor-zoom:hover #catalogoImagen { transform: scale(2); }
 
 .controles { display: flex; justify-content: center; align-items: center; gap: 15px; margin-top: 20px; }
 .btn-ctrl { background: #ff007f; color: white; border: none; padding: 12px; border-radius: 50%; cursor: pointer; }
-.paginador input { width: 50px; text-align: center; font-weight: bold; font-size: 16px; }
 
 /* INSTALACIONES */
 .galeria-uniforme { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
@@ -74,16 +76,23 @@ section {
 .red-item { text-decoration: none; color: white !important; padding: 15px; border-radius: 10px; font-weight: bold; display: flex; align-items: center; justify-content: center; gap: 10px; font-size: 17px; }
 .wa { background: #25d366; } .fb { background: #3b5998; } .tk { background: #000; } .ig { background: #ff4081; }
 
-.btn-maps { 
-    display: inline-block; 
-    margin-top: 25px; 
-    background: #ff007f; 
-    color: white !important; 
-    padding: 16px 32px; 
-    text-decoration: none; 
-    border-radius: 8px; 
-    font-weight: bold; 
-    font-size: 18px;
-    transition: transform 0.2s;
+.btn-maps { display: inline-block; margin-top: 25px; background: #ff007f; color: white !important; padding: 16px 32px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 18px; }
+
+/* 3. PIE DE PÁGINA (DERECHOS RESERVADOS) */
+footer {
+    padding: 40px 20px;
+    text-align: center;
 }
-.btn-maps:hover { transform: scale(1.05); }
+.footer-box {
+    display: inline-block;
+    background: white;
+    padding: 15px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+.footer-box p {
+    margin: 0;
+    color: #b01e51;
+    font-weight: 700;
+    font-size: 14px;
+}
