@@ -45,7 +45,7 @@ if(areaZoom && imgZoom) {
 
 // LÓGICA DE PÁGINAS
 let paginaActual = 1;
-const totalPaginas = 72;
+const totalPaginas = 84;
 
 function actualizarImagen() {
     const num = String(paginaActual).padStart(4, '0');
